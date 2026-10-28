@@ -1,0 +1,49 @@
+#!/bin/bash
+
+#
+# To prevent debug code from being accidentally committed, simply add a comment near your
+# debug code containing the keyword "// NOCOMMIT" or "// !nocommit" (case insensitive) or "// !no-commit" or "// !no commit"
+# and this script will abort the commit.
+#
+echo "Checking non-committable code..."
+if git diff --staged | grep -E -i -w '(!)?no(-| )?commit' >/dev/null 2>&1
+then
+  echo "You are trying to commit non-committable code."
+  echo "Remove the NOCOMMIT string and try again."
+  exit 1
+else
+  # Run local pre-commit hook if exists
+  if [ -e ./.git/hooks/pre-commit ]; then
+    ./.git/hooks/pre-commit "$@"
+  else
+    exit 0
+  fi
+fi
+
+if git commit -v --dry-run | grep 'console.log' >/dev/null 2>&1
+then
+  echo "You are trying to commit non-committable code"
+  echo "Remove the console.log and try again."
+  exit 1
+else
+  exit 0
+fi
+
+if git commit -v --dry-run | grep 'dd(' >/dev/null 2>&1
+then
+  echo "Trying to commit non-committable code."
+  echo "Remove the dump and die and try again."
+  exit 1
+else
+  exit 0
+fi
+
+if git commit -v --dry-run | grep 'dump(' >/dev/null 2>&1
+then
+  echo "Trying to commit non-committable code."
+  echo "Remove the dump and try again."
+  exit 1
+else
+  exit 0
+fi
+

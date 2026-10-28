@@ -1,0 +1,47 @@
+#!/bin/bash
+
+#
+# To prevent debug code from being accidentally committed, simply add a comment near your
+# debug code containing the keyword "// NOCOMMIT" or "// !nocommit" (case insensitive) or "// !no-commit" or "// !no commit"
+# and this script will abort the commit.
+#
+if git diff --staged | grep -E -i -w '(!)?no(-| )?commit' >/dev/null 2>&1
+then
+  echo "You are trying to commit non-committable code."
+  echo "Remove the NOCOMMIT string and try again."
+  exit 1
+fi
+
+if [[ $(git commit -v --dry-run) == *"dd ("* ]]; then
+  echo 'Do not commit dump and dies'
+  exit 1
+fi
+
+if [[ $(git commit -v --dry-run) == *"dd("* ]]; then
+  echo 'Do not commit dump and dies'
+  exit 1
+fi
+
+if [[ $(git commit -v --dry-run) == *"dump ("* ]]; then
+  echo 'Do not commit dump'
+  exit 1
+fi
+
+if [[ $(git commit -v --dry-run) == *"dump("* ]]; then
+  echo 'Do not commit dump'
+  exit 1
+fi
+
+
+if [[ $(git commit -v --dry-run) == *"console.log"* ]]; then
+  echo 'Do not commit console logs'
+  exit 1
+fi
+
+if [[ $(git commit -v --dry-run) == *"Log::"* ]]; then
+  echo 'Do not commit laravel logs'
+  exit 1
+fi
+
+
+exit 0

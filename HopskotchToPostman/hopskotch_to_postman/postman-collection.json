@@ -1,0 +1,1058 @@
+{
+  "info": {
+    "name": "DMZ Ruled",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1 : Get Benefit Premium",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"apikey\": \"<<api_key>>\",\n    \"call_id\": \"cbdbe215-abc6-4ad0-a26a-ee3ffeee7ee3\",\n    \"product_id\": \"1\",\n    \"frequency\": \"Annual\",\n    \"benefit_array\": [\n        {\n            \"benefit_id\": \"1\",\n            \"benefit\": \"1\",\n            \"age\": 37,\n            \"gender\": \"F\",\n            \"benefit_amount\": 100000.0\n        },\n        {\n            \"benefit_id\": \"Spouse\",\n            \"benefit\": \"2\",\n            \"age\": 37,\n            \"gender\": \"F\",\n            \"benefit_amount\": 175000.0\n        }\n    ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/product.php/getBenefitPremium/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "2 : Upload Sale Rule Enabled",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer: 123123123123123123123123123"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"apikey\": \"<<api_key>>\",\n    \"status\": \"\",\n    \"sale_reference_id\": \"\",\n    \"mandate_reference_number\": \"random\",\n    \"status\": \"pending\",\n    \"product_id\": \"1\",\n    \"third_party_policy\": \"0\",\n    \"owner_id_no\": \"6909284517081\",\n    \"owner_passport_no\": \" \",\n    \"abi\": \"5\",\n    \"sale_channel\": \"TestingJason\",\n    \"consultant_code\": \"2216\",\n    \"bank_name\": \"Standard Bank\",\n    \"bank_branch_code\": \"051001\",\n    \"bank_account_no\": \"10005884940\",\n    \"bank_account_type\": \"Savings\",\n    \"debit_day\": \"500\",\n    \"last_skip_date\": \"12-07-2025\",\n    \"policy_net_premium\": \"\",\n    \"policy_fee\": \"2500\",\n    \"policy_discount_rand\": \"0\",\n    \"policy_discount_percent\": \"0\",\n    \"one_time_pin\": \"0101\",\n    \"one_time_pin_number\": \"27712345678\",\n    \"one_time_pin_date_time\": \"2023-09-20 12:03:09\",\n    \"policy_note\": \"Testing\",\n    \"digi_code_data_array\": {\n      \"firstname\": \"Robyn\",\n      \"lastname\": \"Pottier\",\n      \"undersupervision\": \"True\",\n      \"underexemption\": \"False\",\n      \"employee_number\": \"A12345\"\n    },\n    \"policy_roleplayer_array\": [\n      {\n        \"policy_roleplayer_type\": \"Primary Life Assured\",\n        \"policy_roleplayer_firstname\": \"Regrssion\",\n        \"policy_roleplayer_middlename\": \"\",\n        \"policy_roleplayer_initials\": \"N\",\n        \"policy_roleplayer_lastname\": \"Test\",\n        \"policy_roleplayer_cellphone\": \"0790707189\",\n        \"policy_roleplayer_email_address\": \"mulalo@mobi.co.za\",\n        \"policy_roleplayer_id_number\": \"6909284517081\",\n        \"policy_roleplayer_passport_number\": \"A21215164\",\n        \"policy_roleplayer_date_of_birth\": \"1969-09-28\",\n        \"policy_roleplayer_age\": \"56\",\n        \"policy_roleplayer_external_customer_reference\": \"who knows 4\",\n        \"policy_roleplayer_relationship_to_owner\": \"Owner\",\n        \"policy_roleplayer_gender\": \"Female\"\n      },\n      {\n        \"policy_roleplayer_type\": \"Account Payer\",\n        \"policy_roleplayer_firstname\": \"Regrssion\",\n        \"policy_roleplayer_middlename\": \"\",\n        \"policy_roleplayer_initials\": \"N\",\n        \"policy_roleplayer_lastname\": \"Test\",\n        \"policy_roleplayer_cellphone\": \"0790707189\",\n        \"policy_roleplayer_email_address\": \"mulalo@mobi.co.za\",\n        \"policy_roleplayer_id_number\": \"6909284517081\",\n        \"policy_roleplayer_passport_number\": \"\",\n        \"policy_roleplayer_date_of_birth\": \"1969-09-28\",\n        \"policy_roleplayer_age\": \"56\",\n        \"policy_roleplayer_external_customer_reference\": \"who knows 4\",\n        \"policy_roleplayer_relationship_to_owner\": \"Owner\",\n        \"policy_roleplayer_gender\": \"Female\"\n      },\n      {\n        \"policy_roleplayer_type\": \"Owner\",\n        \"policy_roleplayer_firstname\": \"Regrssion\",\n        \"policy_roleplayer_middlename\": \"\",\n        \"policy_roleplayer_initials\": \"N\",\n        \"policy_roleplayer_lastname\": \"Test\",\n        \"policy_roleplayer_cellphone\": \"0839965675\",\n        \"policy_roleplayer_email_address\": \"mulalo@mobi.co.za\",\n        \"policy_roleplayer_id_number\": \"\",\n        \"policy_roleplayer_passport_number\": \"A21215164\",\n        \"policy_roleplayer_date_of_birth\": \"1969-09-28\",\n        \"policy_roleplayer_age\": \"56\",\n        \"policy_roleplayer_external_customer_reference\": \"who knows 4\",\n        \"policy_roleplayer_relationship_to_owner\": \"Owner\",\n        \"policy_roleplayer_gender\": \"Female\"\n      }\n    ],\n    \"benefit_array\": [\n      {\n        \"benefit_roleplayer_array\": [\n          {\n            \"benefit_roleplayer_type\": \"Life Assured\",\n            \"benefit_roleplayer_firstname\": \"Regrssion\",\n            \"benefit_roleplayer_middlename\": null,\n            \"benefit_roleplayer_initials\": null,\n            \"benefit_roleplayer_lastname\": \"Test\",\n            \"benefit_roleplayer_gender\": \"Female\",\n            \"benefit_roleplayer_cellphone\": \"\",\n            \"benefit_roleplayer_email_address\": null,\n            \"benefit_roleplayer_id_number\": \"6909284517081\",\n            \"benefit_roleplayer_passport_number\": \"\",\n            \"benefit_roleplayer_date_of_birth\": \"1969-09-28\",\n            \"benefit_roleplayer_external_customer_reference\": null,\n            \"benefit_roleplayer_relationship_to_owner\": \"PARENT\",\n            \"benefit_roleplayer_percentage\": null\n          }\n        ],\n        \"benefit_id\": \"1\",\n        \"benefit_premium\": 27.95,\n        \"benefit_amount\": 6000,\n        \"benefit_term\": \"1\",\n        \"benefit_frequency\": 1,\n        \"benefit_fee\": \"0\",\n        \"benefit_sum_assured\": 6000,\n        \"benefit_discount_percent\": \"0\"\n      },\n      {\n        \"benefit_roleplayer_array\": [\n          {\n            \"benefit_roleplayer_type\": \"Life Assured\",\n            \"benefit_roleplayer_firstname\": \"Spouse\",\n            \"benefit_roleplayer_middlename\": null,\n            \"benefit_roleplayer_initials\": null,\n            \"benefit_roleplayer_lastname\": \"Nje\",\n            \"benefit_roleplayer_gender\": \"Female\",\n            \"benefit_roleplayer_cellphone\": \"\",\n            \"benefit_roleplayer_email_address\": null,\n            \"benefit_roleplayer_id_number\": \"6909284517081\",\n            \"benefit_roleplayer_passport_number\": \"\",\n            \"benefit_roleplayer_date_of_birth\": \"1969-09-28\",\n            \"benefit_roleplayer_external_customer_reference\": null,\n            \"benefit_roleplayer_relationship_to_owner\": \"PARENT\",\n            \"benefit_roleplayer_percentage\": null\n          }\n        ],\n        \"benefit_id\": \"2\",\n        \"benefit_premium\": 27.5,\n        \"benefit_amount\": 5000,\n        \"benefit_term\": \"1\",\n        \"benefit_frequency\": 1,\n        \"benefit_fee\": \"0\",\n        \"benefit_sum_assured\": 8700,\n        \"benefit_discount_percent\": \"0\"\n      },\n      {\n        \"benefit_roleplayer_array\": [\n          {\n            \"benefit_roleplayer_type\": \"Life Assured\",\n            \"benefit_roleplayer_firstname\": \"Spouse\",\n            \"benefit_roleplayer_middlename\": null,\n            \"benefit_roleplayer_initials\": null,\n            \"benefit_roleplayer_lastname\": \"Nje\",\n            \"benefit_roleplayer_gender\": \"Female\",\n            \"benefit_roleplayer_cellphone\": \"\",\n            \"benefit_roleplayer_email_address\": null,\n            \"benefit_roleplayer_id_number\": \"6909284517081\",\n            \"benefit_roleplayer_passport_number\": \"\",\n            \"benefit_roleplayer_date_of_birth\": \"1969-09-28\",\n            \"benefit_roleplayer_external_customer_reference\": null,\n            \"benefit_roleplayer_relationship_to_owner\": \"PARENT\",\n            \"benefit_roleplayer_percentage\": null\n          }\n        ],\n        \"benefit_id\": \"2\",\n        \"benefit_premium\": 27.81,\n        \"benefit_amount\": 5500,\n        \"benefit_term\": \"1\",\n        \"benefit_frequency\": 1,\n        \"benefit_fee\": \"0\",\n        \"benefit_sum_assured\": 5500,\n        \"benefit_discount_percent\": \"0\"\n      }\n    ]\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/sale.php/upload/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Upload Sale BLP",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer: 123123123123123123123123123"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n   \"apikey\":\"<<api_key>>\",\n   \"sale_reference_id\":\"\",\n   \"product_id\":\"30\",\n   \"abi\":5,\n   \"sale_channel\":\"Customer First\",\n   \"consultant_code\":\"A246164\",\n   \"policy_net_premium\":6.63,\n   \"one_time_pin_number\":0,\n   \"one_time_pin_date_time\":\"0001-01-01T00:00:00\",\n   \"policy_note\":\"Notes:,Compliance 1999/065181/23:CLEAR,Compliance 9103065838180:CLEAR\",\n   \"lead_id\":null,\n   \"loan_account_array\":[\n      {\n         \"loan_account_number\":\"0000010009749908\",\n         \"outstanding_loan_amount\":15678,\n         \"instalment_amount\":422.56,\n         \"cycle_day\":0,\n         \"facility_amount\":15678,\n         \"credit_agreement_type\":\"Business Overdraft\"\n      }\n   ],\n   \"policy_roleplayer_array\":[\n      {\n         \"policy_roleplayer_type\":\"Owner\",\n         \"policy_roleplayer_firstname\":\"10RIO RIDGE 1073 CC\",\n         \"policy_roleplayer_middlename\":null,\n         \"policy_roleplayer_initials\":null,\n         \"policy_roleplayer_lastname\":null,\n         \"policy_roleplayer_gender\":null,\n         \"policy_roleplayer_cellphone\":\"\",\n         \"policy_roleplayer_email_address\":\"\",\n         \"policy_roleplayer_id_number\":null,\n         \"policy_roleplayer_passport_number\":null,\n         \"policy_roleplayer_date_of_birth\":\"1999-08-09\",\n         \"policy_roleplayer_age\":\"0\",\n         \"policy_roleplayer_external_customer_reference\":\"4553ed7c-ae10-00d8-0000-00000ab6f52b\",\n         \"policy_roleplayer_relationship_to_owner\":null,\n         \"passport_data\":null,\n         \"address_array\":null\n      },\n      {\n         \"policy_roleplayer_type\":\"Contact Person\",\n         \"policy_roleplayer_firstname\":\"HYLTON\",\n         \"policy_roleplayer_middlename\":null,\n         \"policy_roleplayer_initials\":\"H\",\n         \"policy_roleplayer_lastname\":\"ZULU\",\n         \"policy_roleplayer_gender\":\"M\",\n         \"policy_roleplayer_cellphone\":null,\n         \"policy_roleplayer_email_address\":null,\n         \"policy_roleplayer_id_number\":\"9103065838180\",\n         \"policy_roleplayer_passport_number\":\"\",\n         \"policy_roleplayer_date_of_birth\":\"1991-03-06\",\n         \"policy_roleplayer_age\":\"35\",\n         \"policy_roleplayer_external_customer_reference\":null,\n         \"policy_roleplayer_relationship_to_owner\":\"MEMBER\",\n         \"passport_data\":{\n            \"country_of_birth\":null,\n            \"country_of_citizenship\":null,\n            \"country_of_issue\":null,\n            \"nationality\":null,\n            \"country_of_residence\":null,\n            \"passport_date_of_issue\":null,\n            \"passport_expiry_date\":null,\n            \"visa_or_permit_type_code\":null,\n            \"visa_or_permit_number\":null,\n            \"visa_or_permit_issue_date\":null,\n            \"visa_or_permit_expiry_date\":null\n         },\n         \"address_array\":null\n      }\n   ],\n   \"benefit_array\":[\n      {\n         \"benefit_roleplayer_array\":[\n            {\n               \"benefit_roleplayer_type\":\"Life Assured\",\n               \"benefit_roleplayer_firstname\":\"HYLTON\",\n               \"benefit_roleplayer_middlename\":null,\n               \"benefit_roleplayer_initials\":\"H\",\n               \"benefit_roleplayer_lastname\":\"ZULU\",\n               \"benefit_roleplayer_gender\":\"M\",\n               \"benefit_roleplayer_cellphone\":null,\n               \"benefit_roleplayer_email_address\":null,\n               \"benefit_roleplayer_id_number\":\"9103065838180\",\n               \"benefit_roleplayer_passport_number\":\"\",\n               \"benefit_roleplayer_date_of_birth\":\"1991-03-06\",\n               \"benefit_roleplayer_age\":null,\n               \"benefit_roleplayer_external_customer_reference\":null,\n               \"benefit_roleplayer_relationship_to_owner\":\"MEMBER\",\n               \"underwriting_reference\":null,\n               \"benefit_roleplayer_percentage\":null\n            }\n         ],\n         \"benefit_id\":1,\n         \"benefit_premium\":6.63,\n         \"benefit_amount\":0,\n         \"benefit_term\":\"1\",\n         \"benefit_frequency\":\"1\",\n         \"benefit_fee\":\"0.0\",\n         \"benefit_sum_assured\":0,\n         \"benefit_discount_percent\":null\n      }\n   ],\n   \"status\":\"incomplete\",\n   \"owner_sa_id_no\":null,\n   \"owner_passport_no\":null,\n   \"bank_name\":null,\n   \"bank_branch_code\":null,\n   \"bank_account_no\":null,\n   \"bank_account_type\":null,\n   \"debit_day\":\"1\",\n   \"last_skip_date\":\"\",\n   \"policy_fee\":\"0.00\",\n   \"policy_discount_rand\":null,\n   \"policy_discount_percent\":null,\n   \"waive_waiting_period\":null,\n   \"campaign_code\":null,\n   \"promo_code\":null,\n   \"owner_registration_no\":\"1999/065181/23\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/sale.php/upload/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "3 : Retrieve Sale",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"apikey\": \"<<api_key>>\",\n    \"sale_reference_id\": \"FUN100004414\"\n    //\"owner_passport_no\": \"random\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/sale.php/retrieveSale/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "4 : Commit Sale",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"apikey\": \"<<api_key>>\",\n    \"sale_reference_id\": \"BLPA100970\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/sale.php/commitSale/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "5 : Retrieve Policy Status",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"apikey\": \"<<api_key>>\",\n    \"policy_number\": \"TMA2A4394\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/sale.php/doc/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "6 : Get Rate Card",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"apikey\": \"<<api_key>>\",\r\n    \"product_id\": \"1\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/product.php/getRateCard/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "7 : Get Full Policy Information Rule Enabled",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"apikey\": \"<<api_key>>\",\n    \"policy_number\": \"TMA2A4709\",\n  \"include_open_amendment\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/service.php/getFullPolicyInformation/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "8 : Get Policy History",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "<<url>>/public/api/service.php/getPolicyHistory/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetBenefitPremium",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"apikey\": \"<<api_key>>\",\r\n    \"call_id\": \"cbdbe215-abc6-4ad0-a26a-ee3ffeee7ee3\",\r\n    \"product_id\": \"1\",\r\n    \"premium_frequency\": \"Annual\",\r\n    \"benefit_array\": [\r\n        {\r\n            \"benefit_id\": \"Main\",\r\n            \"benefit\": \"1\",\r\n            \"age\": 25,\r\n            \"gender\": \"M\",\r\n            \"benefit_amount\": 100000.0\r\n        }\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/product.php/getBenefitPremium/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getComplexBenefitPremium",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "\n/*{\n    \"apikey\": \"<<api_key>>\",\n    \"call_id\": \"cbd1215-abc6-4ad0-a26a-ee3ffeee7ee3\", // Required\n    \"product_id\": 3, // Required\n    \"loan_account_array\": [\n        {\n            \"loan_account_number\": \"123123123123\",\n            \"outstanding_loan_amount\": 4500, // We will overwrite the benefit_amount with this value\n            \"instalment_amount\": 100, // Required\n            \"credit_agreement_type\": \"Business Overdraft\" // Required\n        }\n    ],\n    \"benefit_array\": [\n        {\n            \"em_loading\": 0,\n            \"pm_loading\": 0,\n            \"benefit_id\": \"Death\",\n            \"benefit\": 1,// Required\n            \"age\": 23, // Required\n            \"gender\": \"M\", // Required\n            \"benefit_amount\": 4500, // Will use this value if outstanding_loan_amount is not given\n            \"underwriting_referance\": 1, // For go-live this will always be 1\n            \"member_referance_number\": \"qdqwdqwdwq-12312321-qsdqwdq-123123\" // This will be the BP Guid, It will be returned in the response after the ACCP deploy \n        },\n        {\n            \"em_loading\": 0,\n            \"pm_loading\": 0,\n            \"benefit_id\": \"Dread\",\n            \"benefit\": 2,// Required\n            \"age\": 23,// Required\n            \"gender\": \"M\",// Required\n            \"benefit_amount\": 4500,\n            \"underwriting_referance\": 1,  // For go-live this will always be 1\n            \"member_referance_number\": \"qdqwdqwdwq-12312321-qsdqwdq-123123\"\n        },\n        {\n            \"em_loading\": 0,\n            \"pm_loading\": 0,\n            \"benefit_id\": \"Disability\",\n            \"benefit\": 3,// Required\n            \"age\": 45,// Required\n            \"gender\": \"F\",// Required\n            \"benefit_amount\": 4500,\n            \"underwriting_referance\": 1, // For go-live this will always be 1\n            \"member_referance_number\": \"xxxxxx-12312321-qsdqwdq-123123\"\n        },\n        {\n            \"em_loading\": 0,\n            \"pm_loading\": 0,\n            \"benefit_id\": \"Permanent Disability\",\n            \"benefit\": 4,// Required\n            \"age\": 45,// Required\n            \"gender\": \"F\",// Required\n            \"benefit_amount\": 4500,\n            \"underwriting_referance\": 1, // For go-live this will always be 1\n            \"member_referance_number\": \"xxxxxx-12312321-qsdqwdq-123123\"\n        }\n    ]\n}*/\n\n\n{\n    \"apikey\": \"<<api_key>>\",\n    \"call_id\": \"cbd1215-abc6-4ad0-a26a-ee3ffeee7ee3\",\n    \"product_id\": \"30\",\n    \"policy_number\": \"BLPA100038\", // if existing\n  //  \"external_policy_number\": \"FLP100001222\", // interchangeable with policy_number\n    \"third_party_policy\": null,\n    \"customer_segment\": 1, // New field\n    \"commission_factor\": 3, // New field\n    \"benefit_array\": [\n        {\n            \"benefit_unique_identifier\": \"xxxx\", //If benefit exists\n            \"benefit_id\": \"xxx\", //If new\n            \"benefit\": \"1\",\n            \"age\": 33,\n            \"gender\": \"M\",\n            \"benefit_amount\": \"30000000\",\n            \"em_loading\": null, // New field\n            \"pm_loading\": null, // New field\n            \"education\": \"Tertiary\", // New field\n            \"smoker_status\": \"Smoker\", // New field\n            \"gross_monthly_income\": 20000, // New field\n            \"marital_status\": \"Married\", // New field\n            \"credit_score\": 1000, // New field\n            \"bank_risk_score\": 50, // New field\n            \"benefit_discount_array\": [ // New array\n                {\n                    \"benefit_discount_type\": \"Staff\",\n                    \"benefit_discount_percentage\": null\n                }\n            ]\n        }\n    ]\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/product.php/getComplexBenefitPremium/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "10 : Execure Once-Off Action",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "// {\n//     \"apikey\": \"<<api_key>>\",\n//     \"policy_number\": \"TMAFDB97\",\n//     \"action_type\": \"resend_policy_document\"\n// }\n{\n  \"apikey\": \"<<api_key>>\",\n  \"policy_number\": \"TMA13C6C69\",\n  \"action_type\": \"cancel_policy\",\n  \"action_data\": {\n    \"cancel_date\": \"2026-07-15\",\n    \"cancel_reason\": \"Client Cancelled\"\n  }\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/service.php/executeOnceOffAction/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "19 : Bulk Execure Once-Off Actions",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"apikey\": \"<<api_key>>\",\r\n    \"action_array\" : [\r\n        {\r\n            \"policy_number\": \"TMA4EF45\",\r\n            \"action_type\": \"update_mandate\",\r\n            \"action_data\": {\r\n                \"mandate_reference_number\": \"tTH9X82rHcwPYM\"\r\n            }\r\n        },\r\n        {\r\n            \"policy_number\": \"TMA4EF27\",\r\n            \"action_type\": \"update_mandate\",\r\n            \"action_data\": {\r\n                \"mandate_reference_number\": \"pYFX8rA4tNjLRz\"\r\n            }\r\n        }\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<{url>>/DMZ/public/api/ruled/service.php/executeBulkActions/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "11 : Upload Amended Policy Rule Enabled",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"apikey\": \"<<api_key>>\",\n    \"policy_number\": \"TMA1E96B1\",\n    \"product_id\": \"1\",\n    \"status\": \"Complete\",\n    \"policy_payload_id\": \"1c14d9be9ea1054858ed1626ba6e0229\",\n    \"policy_payload\": {\n        \"owner_passport_no\": null,\n        \"bank_name\": \"STANDARD BANK\",\n        \"bank_branch_code\": \"051001\",\n        \"bank_account_type\": \"SAVINGSACCOUNT\",\n        \"bank_account_no\": \"11122233344\",\n        \"debit_day\": \"5\",\n        \"abi\": \"5\",\n        \"consultant_code\": \"Mulalo\",\n        \"policy_fee\": \"0\",\n        \"third_party_policy\": null,\n        \"policy_discount_rand\": null,\n        \"policy_discount_percent\": null,\n        \"policy_nett_premium\": \"135\",\n        \"last_skip_date\": null,\n        \"collection_method\": \"SSVS\",\n        \"waive_waiting_period\": \"0\",\n        \"policy_note\": null,\n        \"owner_registration_no\": null,\n        \"status\": \"Active\",\n        \"policy_number\": \"TMA1E96B1\",\n        \"product\": \"Standard Bank Flexible Funeral Plan\",\n        \"owner_first_name\": \"Sale\",\n        \"owner_last_name\": \"Mimic\",\n        \"owner_cellphone\": \"27711234567\",\n        \"owner_email_address\": null,\n        \"sum_assured\": \"140000\",\n        \"external_policy_number\": \"FUN110202988\",\n        \"date_created\": \"2026-07-21 11:05:50\",\n        \"owner_id_no\": \"7802250123084\",\n        \"owner_sa_id_no\": \"7802250123084\",\n        \"anniversary_date\": null,\n        \"inception_date\": null,\n        \"contract_status_date_time\": null,\n        \"contract_status_reason\": null,\n        \"contract_status_reason_date\": null,\n        \"automatic_contribution_increase\": null,\n        \"cover_percentage\": null,\n        \"owner_age\": \"48\",\n        \"servicing_channel\": null,\n        \"servicing_agent\": null,\n        \"sale_channel\": \"MulaloAuto\",\n        \"policy_end_date\": null,\n        \"campaign_code\": null,\n        \"promo_code\": null,\n        \"mandate_reference_number\": null,\n        \"lead_id\": null,\n        \"owner_registration_type\": null,\n        \"policy_roleplayer_array\": [\n            {\n                \"policy_roleplayer_type\": \"Account Payer\",\n                \"policy_roleplayer_firstname\": \"Sale\",\n                \"policy_roleplayer_middlename\": null,\n                \"policy_roleplayer_initials\": \"G\",\n                \"policy_roleplayer_lastname\": \"Mimic\",\n                \"policy_roleplayer_cellphone\": \"0711234567\",\n                \"policy_roleplayer_email_address\": null,\n                \"policy_roleplayer_id_number\": \"7802250123084\",\n                \"policy_roleplayer_passport_number\": null,\n                \"policy_roleplayer_date_of_birth\": \"1978-02-25\",\n                \"policy_roleplayer_external_customer_reference\": null,\n                \"policy_roleplayer_relationship_to_owner\": \"OTHER\",\n                \"policy_roleplayer_relationship_to\": null,\n                \"policy_roleplayer_percentage\": null,\n                \"policy_roleplayer_unique_identifier\": \"TMA1E96B1RP0053809838\",\n                \"policy_roleplayer_gender\": \"F\",\n                \"passport_data\": {},\n                \"address_array\": [\n                    {}\n                ]\n            },\n            {\n                \"policy_roleplayer_type\": \"Owner\",\n                \"policy_roleplayer_firstname\": \"Sale\",\n                \"policy_roleplayer_middlename\": null,\n                \"policy_roleplayer_initials\": \"G\",\n                \"policy_roleplayer_lastname\": \"Mimic\",\n                \"policy_roleplayer_cellphone\": \"0711234567\",\n                \"policy_roleplayer_email_address\": null,\n                \"policy_roleplayer_id_number\": \"7802250123084\",\n                \"policy_roleplayer_passport_number\": null,\n                \"policy_roleplayer_date_of_birth\": \"1978-02-25\",\n                \"policy_roleplayer_external_customer_reference\": null,\n                \"policy_roleplayer_relationship_to_owner\": \"OTHER\",\n                \"policy_roleplayer_relationship_to\": null,\n                \"policy_roleplayer_percentage\": null,\n                \"policy_roleplayer_unique_identifier\": \"TMA1E96B1RP0053809839\",\n                \"policy_roleplayer_gender\": \"F\",\n                \"passport_data\": {},\n                \"address_array\": [\n                    {}\n                ]\n            },\n            {\n                \"policy_roleplayer_type\": \"Primary Life Assured\",\n                \"policy_roleplayer_firstname\": \"Sale\",\n                \"policy_roleplayer_middlename\": null,\n                \"policy_roleplayer_initials\": \"G\",\n                \"policy_roleplayer_lastname\": \"Mimic\",\n                \"policy_roleplayer_cellphone\": \"0711234567\",\n                \"policy_roleplayer_email_address\": null,\n                \"policy_roleplayer_id_number\": \"7802250123084\",\n                \"policy_roleplayer_passport_number\": null,\n                \"policy_roleplayer_date_of_birth\": \"1978-02-25\",\n                \"policy_roleplayer_external_customer_reference\": null,\n                \"policy_roleplayer_relationship_to_owner\": \"OTHER\",\n                \"policy_roleplayer_relationship_to\": null,\n                \"policy_roleplayer_percentage\": null,\n                \"policy_roleplayer_unique_identifier\": \"TMA1E96B1RP0053809840\",\n                \"policy_roleplayer_gender\": \"F\",\n                \"passport_data\": {},\n                \"address_array\": [\n                    {}\n                ]\n            }\n        ],\n        \"benefit_array\": [\n            {\n                \"benefit_id\": \"1\",\n                \"benefit_premium\": \"100\",\n                \"benefit_amount\": \"100000\",\n                \"benefit_sum_assured\": \"100000\",\n                \"benefit_term\": \"1\",\n                \"benefit_frequency\": \"1\",\n                \"benefit_discount_percent\": \"0\",\n                \"benefit_fee\": \"0\",\n                \"benefit_status\": \"Active\",\n                \"benefit_unique_identifier\": \"TMA1E96B1B0025412238\",\n                \"benefit_underwriting_array\": [],\n                \"benefit_roleplayer_array\": [\n                    {\n                        \"benefit_roleplayer_type\": \"Life Assured\",\n                        \"benefit_roleplayer_firstname\": \"Sale\",\n                        \"benefit_roleplayer_middlename\": null,\n                        \"benefit_roleplayer_initials\": \"G\",\n                        \"benefit_roleplayer_lastname\": \"Mimic\",\n                        \"benefit_roleplayer_cellphone\": \"0711234567\",\n                        \"benefit_roleplayer_email_address\": null,\n                        \"benefit_roleplayer_id_number\": \"7802250123084\",\n                        \"benefit_roleplayer_passport_number\": null,\n                        \"benefit_roleplayer_date_of_birth\": \"2001-09-25\",\n                        \"benefit_roleplayer_external_customer_reference\": null,\n                        \"benefit_roleplayer_relationship_to_owner\": \"Owner\",\n                        \"benefit_roleplayer_relationship_to\": null,\n                        \"benefit_roleplayer_percentage\": null,\n                        \"benefit_roleplayer_unique_identifier\": \"TMA1E96B1BRP0053809841\",\n                        \"benefit_roleplayer_gender\": \"F\",\n                        \"passport_data\": {}\n                    }\n                ]\n            },\n            {\n                \"benefit_id\": \"2\",\n                \"benefit_premium\": \"35\",\n                \"benefit_amount\": \"40000\",\n                \"benefit_sum_assured\": \"40000\",\n                \"benefit_term\": \"1\",\n                \"benefit_frequency\": \"1\",\n                \"benefit_discount_percent\": \"0\",\n                \"benefit_fee\": \"0\",\n                \"benefit_status\": \"Active\",\n                \"benefit_unique_identifier\": \"TMA1E96B1B0025412239\",\n                \"benefit_underwriting_array\": [],\n                \"benefit_roleplayer_array\": [\n                    {\n                        \"benefit_roleplayer_type\": \"Life Assured\",\n                        \"benefit_roleplayer_firstname\": \"Spouse\",\n                        \"benefit_roleplayer_middlename\": null,\n                        \"benefit_roleplayer_initials\": null,\n                        \"benefit_roleplayer_lastname\": \"Sale\",\n                        \"benefit_roleplayer_cellphone\": null,\n                        \"benefit_roleplayer_email_address\": null,\n                        \"benefit_roleplayer_id_number\": null,\n                        \"benefit_roleplayer_passport_number\": null,\n                        \"benefit_roleplayer_date_of_birth\": \"2007-12-25\",\n                        \"benefit_roleplayer_external_customer_reference\": null,\n                        \"benefit_roleplayer_relationship_to_owner\": \"OTHER\",\n                        \"benefit_roleplayer_relationship_to\": null,\n                        \"benefit_roleplayer_percentage\": null,\n                        \"benefit_roleplayer_unique_identifier\": \"TMA1E96B1BRP0053809842\",\n                        \"benefit_roleplayer_gender\": \"M\",\n                        \"passport_data\": {}\n                    }\n                ]\n            }\n        ],\n        \"loan_account_array\": []\n    }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/service.php/uploadAmendedPolicy/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "11 : Upload Amended Policy Rule Enabled Copy",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"apikey\": \"<<api_key>>\",\n    \"policy_number\": \"TMA17B102\",\n    \"product_id\": \"1\",\n    \"status\": \"complete\",\n    \"policy_payload_id\": \"38e3a338c56d4db77391078687901578\",\n    \"policy_policy_note_reason\": \"Jason copied Dewald\",\n    \"policy_payload\": {\n    \"owner_passport_no\": \"\",\n    \"bank_name\": \"THE STANDARD BANK OF SOUTH AFRICA LIMITED\",\n    \"bank_branch_code\": \"051001\",\n    \"bank_account_type\": \"CHEQUE\",\n    \"bank_account_no\": \"00407555951\",\n    \"debit_day\": \"1\",\n    \"abi\": \"0\",\n    \"consultant_code\": \"A192131\",\n    \"policy_fee\": \"0\",\n    \"third_party_policy\": null,\n    \"policy_discount_rand\": \"0\",\n    \"policy_discount_percent\": null,\n    \"policy_nett_premium\": \"130.09\",\n    \"last_skip_date\": \"2023-02-01\",\n    \"collection_method\": \"DebiCheck\",\n    \"waive_waiting_period\": \"0\",\n    \"policy_note\": null,\n    \"owner_registration_no\": null,\n    \"status\": \"Active\",\n    \"policy_number\": \"TMA17B102\",\n    \"product\": \"Standard Bank Flexible Funeral Plan\",\n    \"owner_first_name\": \"John\",\n    \"owner_last_name\": \"Cooper\",\n    \"owner_cellphone\": \"27740790691\",\n    \"owner_email_address\": \"sam.jonker@stratusolve.com\",\n    \"sum_assured\": \"30000\",\n    \"external_policy_number\": \"FUN005731399\",\n    \"date_created\": \"2023-02-04 09:24:59\",\n    \"owner_id_no\": \"6911128007186\",\n    \"owner_sa_id_no\": \"6911128007186\",\n    \"anniversary_date\": \"2026-03-01 11:34:57\",\n    \"inception_date\": \"2023-03-01 00:00:00\",\n    \"contract_status_date_time\": null,\n    \"contract_status_reason\": null,\n    \"contract_status_reason_date\": null,\n    \"automatic_contribution_increase\": null,\n    \"cover_percentage\": \"100\",\n    \"owner_age\": null,\n    \"servicing_channel\": null,\n    \"servicing_agent\": null,\n    \"sale_channel\": \"Customer1st\",\n    \"policy_end_date\": null,\n    \"campaign_code\": null,\n    \"promo_code\": null,\n    \"mandate_reference_number\": null,\n    \"lead_id\": null,\n    \"owner_registration_type\": null,\n    \"policy_roleplayer_array\": [\n      {\n        \"policy_roleplayer_type\": \"Primary Life Assured\",\n        \"policy_roleplayer_firstname\": \"John\",\n        \"policy_roleplayer_middlename\": null,\n        \"policy_roleplayer_initials\": \"L\",\n        \"policy_roleplayer_lastname\": \"Cooper\",\n        \"policy_roleplayer_cellphone\": \"0740790691\",\n        \"policy_roleplayer_email_address\": \"sam.jonker@stratusolve.com\",\n        \"policy_roleplayer_id_number\": \"6911128007186\",\n        \"policy_roleplayer_passport_number\": \"YouShallNotPass\",\n        \"policy_roleplayer_date_of_birth\": \"1969-11-12\",\n        \"policy_roleplayer_external_customer_reference\": \"9360dba8-a94c-44bf-bfc3-103655748122\",\n        \"policy_roleplayer_relationship_to_owner\": \"OTHER\",\n        \"policy_roleplayer_relationship_to\": null,\n        \"policy_roleplayer_percentage\": null,\n        \"policy_roleplayer_unique_identifier\": \"TMA17B102RP0013831020\",\n        \"policy_roleplayer_gender\": \"M\",\n        \"passport_data\": {},\n        \"address_array\": []\n      },\n      {\n        \"policy_roleplayer_type\": \"Owner\",\n        \"policy_roleplayer_firstname\": \"John\",\n        \"policy_roleplayer_middlename\": null,\n        \"policy_roleplayer_initials\": \"L\",\n        \"policy_roleplayer_lastname\": \"Cooper\",\n        \"policy_roleplayer_cellphone\": \"0740790691\",\n        \"policy_roleplayer_email_address\": \"sam.jonker@stratusolve.com\",\n        \"policy_roleplayer_id_number\": \"6911128007186\",\n        \"policy_roleplayer_passport_number\": \"YouShallNotPass\",\n        \"policy_roleplayer_date_of_birth\": \"1969-11-12\",\n        \"policy_roleplayer_external_customer_reference\": \"9360dba8-a94c-44bf-bfc3-103655748122\",\n        \"policy_roleplayer_relationship_to_owner\": \"OTHER\",\n        \"policy_roleplayer_relationship_to\": null,\n        \"policy_roleplayer_percentage\": null,\n        \"policy_roleplayer_unique_identifier\": \"TMA17B102RP0013831021\",\n        \"policy_roleplayer_gender\": \"M\",\n        \"passport_data\": {},\n        \"address_array\": []\n      },\n      {\n        \"policy_roleplayer_type\": \"Account Payer\",\n        \"policy_roleplayer_firstname\": \"John\",\n        \"policy_roleplayer_middlename\": null,\n        \"policy_roleplayer_initials\": \"L\",\n        \"policy_roleplayer_lastname\": \"Cooper\",\n        \"policy_roleplayer_cellphone\": \"0740790691\",\n        \"policy_roleplayer_email_address\": \"sam.jonker@stratusolve.com\",\n        \"policy_roleplayer_id_number\": \"6911128007186\",\n        \"policy_roleplayer_passport_number\": \"YouShallNotPass\",\n        \"policy_roleplayer_date_of_birth\": \"1969-11-12\",\n        \"policy_roleplayer_external_customer_reference\": \"9360dba8-a94c-44bf-bfc3-103655748122\",\n        \"policy_roleplayer_relationship_to_owner\": \"OTHER\",\n        \"policy_roleplayer_relationship_to\": null,\n        \"policy_roleplayer_percentage\": null,\n        \"policy_roleplayer_unique_identifier\": \"TMA17B102RP0013831022\",\n        \"policy_roleplayer_gender\": \"M\",\n        \"passport_data\": {},\n        \"address_array\": []\n      }\n    ],\n    \"benefit_array\": [\n      {\n        \"benefit_id\": \"1\",\n        \"benefit_premium\": \"130.09\",\n        \"benefit_amount\": \"30000\",\n        \"benefit_sum_assured\": \"30000\",\n        \"benefit_term\": \"1\",\n        \"benefit_frequency\": \"\",\n        \"benefit_discount_percent\": \"0\",\n        \"benefit_fee\": \"0\",\n        \"benefit_status\": \"Active\",\n        \"benefit_unique_identifier\": \"TMA17B102B0004255299\",\n        \"benefit_underwriting_array\": [],\n        \"benefit_roleplayer_array\": [\n          {\n            \"benefit_roleplayer_type\": \"Life Assured\",\n            \"benefit_roleplayer_firstname\": \"John\",\n            \"benefit_roleplayer_middlename\": null,\n            \"benefit_roleplayer_initials\": \"L\",\n            \"benefit_roleplayer_lastname\": \"Cooper\",\n            \"benefit_roleplayer_cellphone\": \"0740790691\",\n            \"benefit_roleplayer_email_address\": \"sam.jonker@stratusolve.com\",\n            \"benefit_roleplayer_id_number\": \"6911128007186\",\n            \"benefit_roleplayer_passport_number\": \"YouShallNotPass\",\n            \"benefit_roleplayer_date_of_birth\": \"1969-11-12\",\n            \"benefit_roleplayer_external_customer_reference\": \"9360dba8-a94c-44bf-bfc3-103655748122\",\n            \"benefit_roleplayer_relationship_to_owner\": \"OTHER\",\n            \"benefit_roleplayer_relationship_to\": null,\n            \"benefit_roleplayer_percentage\": null,\n            \"benefit_roleplayer_unique_identifier\": \"TMA17B102BRP0013831023\",\n            \"benefit_roleplayer_gender\": \"M\",\n            \"passport_data\": {}\n          },\n          {\n            \"benefit_roleplayer_type\": \"Beneficiary\",\n            \"benefit_roleplayer_firstname\": \"Gemma\",\n            \"benefit_roleplayer_middlename\": null,\n            \"benefit_roleplayer_initials\": \"LM\",\n            \"benefit_roleplayer_lastname\": \"Rahman\",\n            \"benefit_roleplayer_cellphone\": \"0740790691\",\n            \"benefit_roleplayer_email_address\": \"sam.jonker@stratusolve.com\",\n            \"benefit_roleplayer_id_number\": \"0706167274184\",\n            \"benefit_roleplayer_passport_number\": \"YouShallNotPass\",\n            \"benefit_roleplayer_date_of_birth\": \"2007-06-16\",\n            \"benefit_roleplayer_external_customer_reference\": \"35707470-37ca-4045-b3c3-5f4c4842569c\",\n            \"benefit_roleplayer_relationship_to_owner\": \"BROTHER\",\n            \"benefit_roleplayer_relationship_to\": null,\n            \"benefit_roleplayer_percentage\": \"100\",\n            \"benefit_roleplayer_unique_identifier\": \"TMA17B102BRP0013831024\",\n            \"benefit_roleplayer_gender\": \"M\",\n            \"passport_data\": {}\n          }\n        ]\n      }\n    ],\n    \"loan_account_array\": []\n  }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/service.php/uploadAmendedPolicy/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "12: Return Amended Policy",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\t\"apikey\":\"<<api_key>>\",\r\n\t\"service_reference_id\": \"G06h9d8BiPIkrsHLMZpK\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/service.php/retrieveAmendedPolicy/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "13 : Commit Amended Policy Rule Enabled",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"apikey\":\"<<api_key>>\",\n\t\"service_reference_id\": \"YTAay5BROVQibq70kGNC\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/service.php/commitAmendedPolicy/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "14 : Cover Search",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/claim.php/coverSearch/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "15 : Populate Claim",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\t\n    \"apikey\":\"<<api_key>>\",\n    \"claim_event_payload\":{\n        \"claim_event_number\":null,\n        \"external_claim_event_number\":\"FLX/123123\",\n        \"claim_event_create_date\":\"14-09-2020\",\n        \"type\":\"death\",\n        \"deceased_details\":{\n            \"id_number\":\"2809095770089\",\n            \"passport_number\":\"A01248674\",\n            \"first_name\":\"Leo\",\n            \"last_name\":\"Tolstoy\",\n            \"date_of_birth\":\"09-09-1928\"\n        },\n        \"date_of_death\":\"22-08-2020\",\n        \"cause_of_death\":\"natural\",\n        \"is_accidental\":false,\n        \"claimant_details\":{\n            \"id_number\":null,\n            \"passport_number\":null,\n            \"first_name\":\"Aleksandr\",\n            \"last_name\":\"Solzhenitsyn\",\n            \"date_of_birth\":\"27-08-1990\",\n            \"cellphone_number\":\"0826589426\",\n            \"email_address\":\"aleks.solz@solovki.ru\"\n        },\n        \"notification_of_death_received\":true,\n        \"claim_array\":[\n            {\n            \"claim_number\":null,\n            \"claim_status\":\"Completed\",\n            \"policy_number\":\"TMA19E88\",\n            \"external_policy_number\":\"FUN0000124\",\n            \"benefit_unique_identifier\":\"TMA19E88B0000456907\",\n            \"action\":\"initiate claim\",\n            \"beneficicary_array\":[\n\t                {\n                        \"id_number\":\"9008271286084\",\n                        \"passport_number\":\"A02448576\",\n                        \"first_name\":\"Aleksandr\",\n                        \"last_name\":\"Solzhenitsyn\",\n                        \"date_of_birth\":\"27-08-1990\",\n                        \"cellphone_number\":\"0826589426\",\n                        \"email_address\":\"aleks.solz@solovki.ru\"\n\t                }\n            \t]\n            }\n        ]\n    }\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/claim.php/populateClaim/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "16 : Retrieve Claim",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"apikey\":\"<<api_key>>\",\n    \"claim_event_number\":\"93c48633e5\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/claim.php/retrieveClaim/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "17 : Check Claim Validity",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"apikey\":\"<<api_key>>\",\n    \"claim_event_number\":\"31fdc79993\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/claim.php/checkClaimValidity/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "18 : Calculate Claim Value",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"apikey\":\"<<api_key>>\",\n\t\"claim_event_number\":\"3617d0013c\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/claim.php/calculateClaimValue/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "19: Ruled Transaction",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"apikey\": \"<<api_key>>\",\n    \"AmountPaid\": \"1.00\",\n    \"TransactionDate\": \"2025-06-26 10:38:00\",\n    \"CollectionMethod\": \"MPESA\",\n    \"UniqueReference\": \"0119954936\",\n    \"TransactionReference\": \"FT251771DZXM\\\\BNK\",\n    \"TransactionClassification\": \"Premium Success\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>//public/api/ruled/transaction.php/upload/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "20: Get Rules",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"apikey\": \"<<api_key>>\",\n    \"product_id\":\"1\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/rules.php/getRules/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "21: Partner Sync",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"apikey\": \"<<api_key>>\",\n    \"customerDataAdvise\": {\n        \"uniqueTransactionIdentificationNumber\": \"dqwdwqqwdqwdqwdcc\",\n        \"cifCountry\": \"ZA\",\n        \"cifSystemIdentificationNumber\": \"01\",\n        \"routingInformation\": [\n            {\n                \"systemIdentificationNumber\": \"373\",\n                \"applicationIdentificationNumber\": \"373\",\n                \"subscriptionStatus\": \"U\"\n            }\n        ],\n        \"customerNumber\": \"0000000000\",\n        \"customerUUID\": \"65a7b5af-9846-495f-bd91-e8c5afc94d2a\",\n        \"customerCategory\": \"1\",\n        \"customerSBGGrouping\": \"SBSA\",\n        \"customerType\": \"01\",\n        \"customerBranch\": \"0000000\",\n        \"consents\": {\n            \"marketingConsent\": [\n                {\n                    \"type\": \"08\",\n                    \"status\": \"true\"\n                },\n                {\n                    \"type\": \"01\",\n                    \"status\": \"false\"\n                },\n                {\n                    \"type\": \"07\",\n                    \"status\": \"true\"\n                },\n                {\n                    \"type\": \"02\",\n                    \"status\": \"false\"\n                },\n                {\n                    \"type\": \"04\",\n                    \"status\": \"false\"\n                },\n                {\n                    \"type\": \"23\",\n                    \"status\": \"false\"\n                },\n                {\n                    \"type\": \"24\",\n                    \"status\": \"true\"\n                },\n                {\n                    \"type\": \"25\",\n                    \"status\": \"false\"\n                },\n                {\n                    \"type\": \"26\",\n                    \"status\": \"false\"\n                },\n                {\n                    \"type\": \"27\",\n                    \"status\": \"true\"\n                },\n                {\n                    \"type\": \"28\",\n                    \"status\": \"false\"\n                },\n                {\n                    \"type\": \"03\",\n                    \"status\": \"true\"\n                }\n            ]\n        },\n        \"marketSegment\": \"136\",\n        \"customerLastUpdatedDate\": \"2024-02-15\",\n        \"customerCreatedDate\": \"2021-10-07\",\n        \"customerIdentification\": {\n            \"identificationDocument\": [\n                {\n                    \"documentType\": \"01\",\n                    \"documentNumber\": \"97123123123\",\n                    \"issuedDate\": \"2021-10-07\",\n                    \"expiryDate\": \"9999-12-31\",\n                    \"countryIssued\": \"ZA\"\n                }\n            ],\n            \"permitDetails\": []\n        },\n        \"customerRelationshipManagerNumber\": \"0000000\",\n        \"preferredContactPerson\": [],\n        \"financialInformation\": {\n            \"income\": [\n                {\n                    \"incomeType\": \"01\",\n                    \"frequency\": \"4\",\n                    \"amount\": \"40150.0\",\n                    \"currency\": \"ZAR\",\n                    \"date\": \"2024-01-17\"\n                },\n                {\n                    \"incomeType\": \"05\",\n                    \"frequency\": \"4\",\n                    \"amount\": \"20000.0\",\n                    \"currency\": \"ZAR\",\n                    \"date\": \"2024-01-17\"\n                }\n            ],\n            \"expense\": [],\n            \"sourceOfFunds\": [\n                {\n                    \"sourceType\": \"0023\",\n                    \"currency\": \"ZAR\",\n                    \"date\": \"2024-02-06\"\n                }\n            ],\n            \"bankruptcy\": {\n                \"bankruptcyIndicator\": \"false\"\n            }\n        },\n        \"creditRisk\": {\n            \"riskCategory\": \"ZXDXIN_XXX\",\n            \"internalScore\": \"2\",\n            \"scoreGeneratedDt\": \"20240117\",\n            \"creditReviewTimeFrame\": {\n                \"startDt\": \"20211007\",\n                \"endDt\": \"99991231\"\n            }\n        },\n        \"customerRoles\": [\n            {\n                \"role\": \"XXX002\",\n                \"startDate\": \"2024-01-17\",\n                \"endDate\": \"9999-12-31\"\n            },\n            {\n                \"role\": \"XXX000\",\n                \"startDate\": \"2024-01-17\",\n                \"endDate\": \"9999-12-31\"\n            },\n            {\n                \"role\": \"XXX014\",\n                \"startDate\": \"2021-10-07\",\n                \"endDate\": \"9999-12-31\"\n            }\n        ],\n        \"industry\": {\n            \"reserveBankCode\": \"001\",\n            \"form50Code\": \"10\"\n        },\n        \"contact\": {\n            \"telephone\": [],\n            \"fax\": [],\n            \"mobile\": [\n                {\n                    \"mobileNumber\": \"0764638333\",\n                    \"countryCode\": \"ZA\",\n                    \"preferredIndicator\": \"true\",\n                    \"obsoleteIndicator\": \"false\",\n                    \"preferredContactTime\": \"03\"\n                }\n            ],\n            \"postalAddress\": [\n                {\n                    \"preferredLanguage\": \"EN\",\n                    \"uniqueAddressIdentifier\": \"3xxxxc31-xxxx-1edc-xxxx-e5417xxxx791\",\n                    \"addressLine3\": \"00 ROAD RD\",\n                    \"city\": \"KEMPTON PARK\",\n                    \"district\": \"XXXXXXX EXT 6\",\n                    \"province\": \"ZAF.GP\",\n                    \"postalCode\": \"0000\",\n                    \"country\": \"ZA\",\n                    \"addressType\": [\n                        {\n                            \"type\": \"05\",\n                            \"startDate\": \"2021-10-07\",\n                            \"endDate\": \"9999-12-31\"\n                        }\n                    ],\n                    \"reasonDeliveryFailed\": \"N\",\n                    \"validity\": {\n                        \"startDate\": \"2021-10-07\",\n                        \"endDate\": \"9999-12-31\"\n                    }\n                },\n                {\n                    \"preferredLanguage\": \"EN\",\n                    \"uniqueAddressIdentifier\": \"367xxxx1-xxxx-1edc-xxxx-f7594xxxxx1ec\",\n                    \"addressLine3\": \"01 ROAD RD\",\n                    \"city\": \"KEMPTON PARK\",\n                    \"district\": \"xxxxxxx EXT 6\",\n                    \"province\": \"ZAF.GP\",\n                    \"postalCode\": \"11111\",\n                    \"country\": \"ZA\",\n                    \"addressType\": [\n                        {\n                            \"type\": \"02\",\n                            \"startDate\": \"2021-10-07\",\n                            \"endDate\": \"9999-12-31\"\n                        },\n                        {\n                            \"type\": \"03\",\n                            \"startDate\": \"2021-10-07\",\n                            \"endDate\": \"9999-12-31\"\n                        }\n                    ],\n                    \"reasonDeliveryFailed\": \"N\",\n                    \"validity\": {\n                        \"startDate\": \"2021-10-07\",\n                        \"endDate\": \"9999-12-31\"\n                    }\n                },\n                {\n                    \"preferredLanguage\": \"EN\",\n                    \"uniqueAddressIdentifier\": \"5xxxx0d3-xxxx-1xxx-xxxx-46731bxxxx86\",\n                    \"addressLine3\": \"02 Crescent CL\",\n                    \"city\": \"MIDRAND\",\n                    \"district\": \"District\",\n                    \"province\": \"ZAF.GP\",\n                    \"postalCode\": \"1212\",\n                    \"country\": \"ZA\",\n                    \"addressType\": [\n                        {\n                            \"type\": \"04\",\n                            \"startDate\": \"2023-11-24\",\n                            \"endDate\": \"9999-12-31\"\n                        }\n                    ],\n                    \"validity\": {\n                        \"startDate\": \"2023-11-24\",\n                        \"endDate\": \"9999-12-31\"\n                    }\n                }\n            ],\n            \"email\": [\n                {\n                    \"emailId\": \"JasonisTesting@gmail.com\",\n                    \"emailObsolete\": \"false\",\n                    \"preferredContactTime\": \"ANYTIME\",\n                    \"preferredIndicator\": \"true\"\n                }\n            ]\n        },\n        \"customerTax\": {\n            \"tax\": [\n                {\n                    \"Type\": \"ZA3\",\n                    \"Number\": \"0763663893\"\n                }\n            ],\n            \"taxClassification\": {}\n        },\n        \"customerPreferences\": {\n            \"communicationMethod\": \"08\",\n            \"nonVerbalLanguage\": \"EN\"\n        },\n        \"countryInfo\": {\n            \"residence\": [\n                {\n                    \"country\": \"ZA\"\n                }\n            ],\n            \"countryOfBirth\": \"LS\",\n            \"citizenship\": \"ZA\",\n            \"nationality\": \"ZA\"\n        },\n        \"naturalPerson\": {\n            \"name\": {\n                \"preferredLanguage\": \"EN\",\n                \"fullName\": \"Jason Is Testing\",\n                \"familyName\": \"Testing\",\n                \"firstName\": \"Jason\",\n                \"middleName\": \"Is\",\n                \"title\": \"\",\n                \"preferredName\": \"Jason\",\n                \"initials\": \"JT\"\n            },\n            \"smoker\": \"false\",\n            \"ethnicity\": \"B\",\n            \"taxPayer\": \"false\",\n            \"gender\": \"2\",\n            \"dateOfBirth\": \"1994-12-08\",\n            \"maritalStatus\": \"1\",\n            \"numberOfDependents\": \"0\",\n            \"employment\": [\n                {\n                    \"employmentType\": \"1\",\n                    \"employerName\": \"A BUSINESS\",\n                    \"occupationIndustry\": \"25\",\n                    \"occupation\": \"13\",\n                    \"employmentNumber\": \"000000\",\n                    \"staffIndicator\": \"false\",\n                    \"employmentStartDate\": \"2021-01-01\",\n                    \"employmentEndDate\": \"9999-12-31\"\n                }\n            ],\n            \"qualification\": [],\n            \"academicInfo\": []\n        },\n        \"customerStatus\": [],\n        \"additionalAttributes\": [],\n        \"securityAttributes\": [],\n        \"serviceProducts\": [],\n        \"vipIndicator\": \"false\"\n    }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/service.php/partnerSync"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "22: Exisiting cover",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "\n{\n    \"apikey\": \"fcUnwXRdb3qDbm3lUs5KqoLGsViDOBVmI1lbPfXn5y3yDQAwaW\",\n    \"IDNumber\":\"0101012425084\",\n    \"ProductId\": 3\n}\n/*\n{\n    \"apikey\": \"<<api_key>>\",\n    \"IDNumber\": \"9401012823182\",\n    \"FirstName\": \"SHADRACK\",\n    \"LastName\": \"LUSIBA\",\n    \"DateOfBirth\": \"1968-05-04\",\n    \"ProductId\": 1\n}\n*/\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/service.php/getExistingCover/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Lock Sale",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"apikey\": \"<<api_key>>\",\n    \"sale_reference_id\": \"FUN100057835\",\n    \"locked_until\": \"2025-09-15 10:49:10\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/sale.php/lockSale/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Upload Sale BLP - Duplicate",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer: 123123123123123123123123123"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"apikey\": \"<<api_key>>\",\n    //\"sale_reference_id\": \"TestFlexiLife6\",\n    \"product_id\": \"30\",\n    \"owner_registration_no\": \"2025/329384/3414\",\n    \"sale_channel\": \"Test Channel\",\n    \"consultant_code\": \"12345\",\n    \"bank_name\": \"ABSA\",\n    \"bank_branch_code\": \"121212\",\n    \"bank_account_no\": \"000000000012345678900\",\n    \"bank_account_type\": \"Savings\",\n    \"debit_day\": \"-1\",\n    \"last_skip_date\": \"\",\n    \"policy_net_premium\": \"100\",\n    \"policy_fee\": \"0\", // this will be overwritten by PAS\n    \"policy_discount_rand\": \"0\",\n    \"policy_discount_percent\": \"0\", // this will be in addition to number of lives and outstanding loan amount discounts\n  \t\"abi\": \"10\",\n    \"policy_note\": \"Just a policy note\", //this could, for example even include a reference number to the Filenet location of the signed quote document\n    \"promo_code\": \"Just a promo code\",\n    \"mandate_reference_number\": \"\", //will not be relevant for this product\n    \"collection_method\": \"Loan Account\", //or \"SSVS\" in future\n    \"loan_account_array\": [\n        {\n            \"loan_account_number\": \"123123123\",\n            \"outstanding_loan_amount\": \"1234.56\",\n            \"instalment_amount\": \"345.67\",\n            // \"cycle_day\": 25, - this is removed even though it was in spec because the BCB API for loan account information updates do not include cycle_day and hence this will not be included in sale upload anymore either\n            // \"facility_amount\": 50000.00, - this is removed as we have been advised that at point of sale the value (which are pointless from a PAS perspective as they will be updated at premium collection date in any case) will  be the same as outstanding_loan_amount\n            \"credit_agreement_type\": \"Business Overdraft\"\n        }\n    ],\n    \"policy_roleplayer_array\": [\n        {\n            \"policy_roleplayer_type\": \"Contact Person\",\n            \"policy_roleplayer_firstname\": \"ContactName\",\n            \"policy_roleplayer_middlename\": \"\",\n            \"policy_roleplayer_initials\": \"N\",\n            \"policy_roleplayer_lastname\": \"ContactSurname\",\n            \"policy_roleplayer_cellphone\": \"27825667172\",\n            \"policy_roleplayer_email_address\": \"\",\n            \"policy_roleplayer_id_number\": \"8410078534081\",\n            \"policy_roleplayer_passport_number\": \"A12345\",\n            \"policy_roleplayer_date_of_birth\": \"1984-10-07\",\n            \"policy_roleplayer_age\": \"35\",\n            \"policy_roleplayer_external_customer_reference\": \"SomeGUID\",\n            \"policy_roleplayer_relationship_to_owner\": \"Director\"\n        },\n        {\n            \"policy_roleplayer_type\": \"Authorised Individual\",\n            \"policy_roleplayer_firstname\": \"Name\",\n            \"policy_roleplayer_middlename\": \"\",\n            \"policy_roleplayer_initials\": \"N\",\n            \"policy_roleplayer_lastname\": \"Main\",\n            \"policy_roleplayer_cellphone\": \"27825667172\",\n            \"policy_roleplayer_email_address\": \"dewald@mobi.co.za\",\n            \"policy_roleplayer_id_number\": \"8410078534081\",\n            \"policy_roleplayer_passport_number\": \"A21215164\",\n            \"policy_roleplayer_date_of_birth\": \"1984-10-07\",\n            \"policy_roleplayer_age\": \"35\",\n            \"policy_roleplayer_external_customer_reference\": \"who knows\",\n            \"policy_roleplayer_relationship_to_owner\": \"Director\"\n        },\n        {\n            \"policy_roleplayer_type\": \"Authorised Individual\",\n            \"policy_roleplayer_firstname\": \"Name\",\n            \"policy_roleplayer_middlename\": \"\",\n            \"policy_roleplayer_initials\": \"N\",\n            \"policy_roleplayer_lastname\": \"Test\",\n            \"policy_roleplayer_cellphone\": \"27825667172\",\n            \"policy_roleplayer_email_address\": \"dewald@mobi.co.za\",\n            \"policy_roleplayer_id_number\": \"8410078534081\",\n            \"policy_roleplayer_passport_number\": \"A21215164\",\n            \"policy_roleplayer_date_of_birth\": \"1984-10-07\",\n            \"policy_roleplayer_age\": \"35\",\n            \"policy_roleplayer_external_customer_reference\": \"who knows\",\n            \"policy_roleplayer_relationship_to_owner\": \"Director\"\n        }\n    ],\n    \"benefit_array\": [\n        {\n            \"benefit_id\": \"1\",\n            \"benefit_premium\": \"50.00\",\n            \"benefit_amount\": \"100\",\n            \"benefit_term\": \"1\",\n            \"benefit_frequency\": \"1\",\n            \"benefit_fee\": \"0\",\n            \"benefit_roleplayer_array\": [\n                {\n                    \"benefit_roleplayer_type\": \"Life Assured\",\n                    \"benefit_roleplayer_firstname\": \"LA1\",\n                    \"benefit_roleplayer_lastname\": \"Name\",\n                    \"benefit_roleplayer_gender\": \"Male\",\n                    \"benefit_roleplayer_cellphone\": \"27825667172\",\n                    \"benefit_roleplayer_email_address\": \"dewald@mobi.co.za\",\n                    \"benefit_roleplayer_id_number\": \"8410075790082\",\n                    \"benefit_roleplayer_date_of_birth\": \"1984-10-07\",\n                    \"benefit_roleplayer_age\": \"41\",\n                    \"benefit_roleplayer_external_customer_reference\": \"Who Knows\",\n                    \"benefit_roleplayer_relationship_to_owner\": \"\",\n                    \"underwriting_reference\": \"1\"\n                }\n            ]\n        },\n        {\n            \"benefit_id\": \"2\",\n            \"benefit_premium\": \"40.00\",\n            \"benefit_amount\": \"100\",\n            \"benefit_term\": \"1\",\n            \"benefit_frequency\": \"1\",\n            \"benefit_fee\": \"0\",\n            \"benefit_roleplayer_array\": [\n                {\n                    \"benefit_roleplayer_type\": \"Life Assured\",\n                    \"benefit_roleplayer_firstname\": \"LA2\",\n                    \"benefit_roleplayer_lastname\": \"Spouse\",\n                    \"benefit_roleplayer_gender\": \"Female\",\n                    \"benefit_roleplayer_cellphone\": \"27825667172\",\n                    \"benefit_roleplayer_email_address\": \"dewald@mobi.co.za\",\n                    \"benefit_roleplayer_id_number\": \"9411164837189\",\n                    \"benefit_roleplayer_date_of_birth\": \"1994-11-16\",\n                    \"benefit_roleplayer_age\": \"31\",\n                    \"benefit_roleplayer_external_customer_reference\": \"Who Knows\",\n                    \"benefit_roleplayer_relationship_to_owner\": \"Spouse\",\n                    \"underwriting_reference\": \"1\"\n                }\n            ]\n        }\n    ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/sale.php/upload/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Upload Sale BLP - Duplicate",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer: 123123123123123123123123123"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"apikey\": \"<<api_key>>\",\n    //\"sale_reference_id\": \"TestFlexiLife6\",\n    \"product_id\": \"1\",\n    \"owner_registration_no\": \"2025/329384/3414\",\n    \"sale_channel\": \"Test Channel\",\n    \"consultant_code\": \"12345\",\n    \"bank_name\": \"ABSA\",\n    \"bank_branch_code\": \"121212\",\n    \"bank_account_no\": \"000000000012345678900\",\n    \"bank_account_type\": \"Savings\",\n    \"debit_day\": \"-1\",\n    \"last_skip_date\": \"\",\n    \"policy_net_premium\": \"100\",\n    \"policy_fee\": \"0\", // this will be overwritten by PAS\n    \"policy_discount_rand\": \"0\",\n    \"policy_discount_percent\": \"0\", // this will be in addition to number of lives and outstanding loan amount discounts\n    \"policy_note\": \"Just a policy note\", //this could, for example even include a reference number to the Filenet location of the signed quote document\n    \"promo_code\": \"Just a promo code\",\n    \"mandate_reference_number\": \"\", //will not be relevant for this product\n    \"collection_method\": \"Loan Account\", //or \"SSVS\" in future\n    \"loan_account_array\": [\n        {\n            \"loan_account_number\": \"123123123\",\n            \"outstanding_loan_amount\": 1234.56,\n            \"instalment_amount\": 345.67,\n            // \"cycle_day\": 25, - this is removed even though it was in spec because the BCB API for loan account information updates do not include cycle_day and hence this will not be included in sale upload anymore either\n            // \"facility_amount\": 50000.00, - this is removed as we have been advised that at point of sale the value (which are pointless from a PAS perspective as they will be updated at premium collection date in any case) will  be the same as outstanding_loan_amount\n            \"credit_agreement_type\": \"Business Overdraft\"\n        }\n    ],\n    \"policy_roleplayer_array\": [\n        {\n            \"policy_roleplayer_type\": \"Contact Person\",\n            \"policy_roleplayer_firstname\": \"ContactName\",\n            \"policy_roleplayer_middlename\": \"\",\n            \"policy_roleplayer_initials\": \"N\",\n            \"policy_roleplayer_lastname\": \"ContactSurname\",\n            \"policy_roleplayer_cellphone\": \"27825667172\",\n            \"policy_roleplayer_email_address\": \"\",\n            \"policy_roleplayer_id_number\": \"8410078534081\",\n            \"policy_roleplayer_passport_number\": \"A12345\",\n            \"policy_roleplayer_date_of_birth\": \"1984-10-07\",\n            \"policy_roleplayer_age\": 35,\n            \"policy_roleplayer_external_customer_reference\": \"SomeGUID\",\n            \"policy_roleplayer_relationship_to_owner\": \"Director\"\n        },\n        {\n            \"policy_roleplayer_type\": \"Authorised Individual\",\n            \"policy_roleplayer_firstname\": \"Name\",\n            \"policy_roleplayer_middlename\": \"\",\n            \"policy_roleplayer_initials\": \"N\",\n            \"policy_roleplayer_lastname\": \"Main\",\n            \"policy_roleplayer_cellphone\": \"27825667172\",\n            \"policy_roleplayer_email_address\": \"dewald@mobi.co.za\",\n            \"policy_roleplayer_id_number\": \"8410078534081\",\n            \"policy_roleplayer_passport_number\": \"A21215164\",\n            \"policy_roleplayer_date_of_birth\": \"1984-10-07\",\n            \"policy_roleplayer_age\": 35,\n            \"policy_roleplayer_external_customer_reference\": \"who knows\",\n            \"policy_roleplayer_relationship_to_owner\": \"Director\"\n        },\n        {\n            \"policy_roleplayer_type\": \"Authorised Individual\",\n            \"policy_roleplayer_firstname\": \"Name\",\n            \"policy_roleplayer_middlename\": \"\",\n            \"policy_roleplayer_initials\": \"N\",\n            \"policy_roleplayer_lastname\": \"Test\",\n            \"policy_roleplayer_cellphone\": \"27825667172\",\n            \"policy_roleplayer_email_address\": \"dewald@mobi.co.za\",\n            \"policy_roleplayer_id_number\": \"8410078534081\",\n            \"policy_roleplayer_passport_number\": \"A21215164\",\n            \"policy_roleplayer_date_of_birth\": \"1984-10-07\",\n            \"policy_roleplayer_age\": \"35\",\n            \"policy_roleplayer_external_customer_reference\": \"who knows\",\n            \"policy_roleplayer_relationship_to_owner\": \"Director\"\n        }\n    ],\n    \"benefit_array\": [\n        {\n            \"benefit_id\": \"1\",\n            \"benefit_premium\": \"50.00\",\n            \"benefit_amount\": \"200\",\n            \"benefit_term\": \"1\",\n            \"benefit_frequency\": \"1\",\n            \"benefit_fee\": \"0\",\n            \"benefit_roleplayer_array\": [\n                {\n                    \"benefit_roleplayer_type\": \"Life Assured\",\n                    \"benefit_roleplayer_firstname\": \"LA1\",\n                    \"benefit_roleplayer_lastname\": \"Name\",\n                    \"benefit_roleplayer_gender\": \"Male\",\n                    \"benefit_roleplayer_cellphone\": \"27825667172\",\n                    \"benefit_roleplayer_email_address\": \"dewald@mobi.co.za\",\n                    \"benefit_roleplayer_id_number\": \"8410078534081\",\n                    \"benefit_roleplayer_date_of_birth\": \"1984-10-07\",\n                    \"benefit_roleplayer_age\": \"35\",\n                    \"benefit_roleplayer_external_customer_reference\": \"Who Knows\",\n                    \"benefit_roleplayer_relationship_to_owner\": \"\",\n                    \"underwriting_reference\": \"1\"\n                }\n            ]\n        },\n        {\n            \"benefit_id\": \"2\",\n            \"benefit_premium\": \"40.00\",\n            \"benefit_amount\": \"100\",\n            \"benefit_term\": \"1\",\n            \"benefit_frequency\": \"1\",\n            \"benefit_fee\": \"0\",\n            \"benefit_roleplayer_array\": [\n                {\n                    \"benefit_roleplayer_type\": \"Life Assured\",\n                    \"benefit_roleplayer_firstname\": \"LA2\",\n                    \"benefit_roleplayer_lastname\": \"Spouse\",\n                    \"benefit_roleplayer_gender\": \"Female\",\n                    \"benefit_roleplayer_cellphone\": \"27825667172\",\n                    \"benefit_roleplayer_email_address\": \"dewald@mobi.co.za\",\n                    \"benefit_roleplayer_id_number\": \"8811160309086\",\n                    \"benefit_roleplayer_date_of_birth\": \"1988-11-16\",\n                    \"benefit_roleplayer_age\": \"31\",\n                    \"benefit_roleplayer_external_customer_reference\": \"Who Knows\",\n                    \"benefit_roleplayer_relationship_to_owner\": \"Spouse\",\n                    \"underwriting_reference\": \"1\"\n                }\n            ]\n        }\n    ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/sale.php/upload/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Upload Sale BLP - Duplicate",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer: 123123123123123123123123123"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"apikey\": \"<<api_key>>\",\n    //\"sale_reference_id\": \"TestFlexiLife6\",\n    \"product_id\": \"1\",\n    \"owner_registration_no\": \"2025/329384/3414\",\n    \"sale_channel\": \"Test Channel\",\n    \"consultant_code\": \"12345\",\n    \"bank_name\": \"ABSA\",\n    \"bank_branch_code\": \"121212\",\n    \"bank_account_no\": \"000000000012345678900\",\n    \"bank_account_type\": \"Savings\",\n    \"debit_day\": \"-1\",\n    \"last_skip_date\": \"\",\n    \"policy_net_premium\": \"100\",\n    \"policy_fee\": \"0\", // this will be overwritten by PAS\n    \"policy_discount_rand\": \"0\",\n    \"policy_discount_percent\": \"0\", // this will be in addition to number of lives and outstanding loan amount discounts\n    \"policy_note\": \"Just a policy note\", //this could, for example even include a reference number to the Filenet location of the signed quote document\n    \"promo_code\": \"Just a promo code\",\n    \"mandate_reference_number\": \"\", //will not be relevant for this product\n    \"collection_method\": \"Loan Account\", //or \"SSVS\" in future\n    \"loan_account_array\": [\n        {\n            \"loan_account_number\": \"123123123\",\n            \"outstanding_loan_amount\": 1234.56,\n            \"instalment_amount\": 345.67,\n            // \"cycle_day\": 25, - this is removed even though it was in spec because the BCB API for loan account information updates do not include cycle_day and hence this will not be included in sale upload anymore either\n            // \"facility_amount\": 50000.00, - this is removed as we have been advised that at point of sale the value (which are pointless from a PAS perspective as they will be updated at premium collection date in any case) will  be the same as outstanding_loan_amount\n            \"credit_agreement_type\": \"Business Overdraft\"\n        }\n    ],\n    \"policy_roleplayer_array\": [\n        {\n            \"policy_roleplayer_type\": \"Contact Person\",\n            \"policy_roleplayer_firstname\": \"ContactName\",\n            \"policy_roleplayer_middlename\": \"\",\n            \"policy_roleplayer_initials\": \"N\",\n            \"policy_roleplayer_lastname\": \"ContactSurname\",\n            \"policy_roleplayer_cellphone\": \"27825667172\",\n            \"policy_roleplayer_email_address\": \"\",\n            \"policy_roleplayer_id_number\": \"8410078534081\",\n            \"policy_roleplayer_passport_number\": \"A12345\",\n            \"policy_roleplayer_date_of_birth\": \"1984-10-07\",\n            \"policy_roleplayer_age\": 35,\n            \"policy_roleplayer_external_customer_reference\": \"SomeGUID\",\n            \"policy_roleplayer_relationship_to_owner\": \"Director\"\n        },\n        {\n            \"policy_roleplayer_type\": \"Authorised Individual\",\n            \"policy_roleplayer_firstname\": \"Name\",\n            \"policy_roleplayer_middlename\": \"\",\n            \"policy_roleplayer_initials\": \"N\",\n            \"policy_roleplayer_lastname\": \"Main\",\n            \"policy_roleplayer_cellphone\": \"27825667172\",\n            \"policy_roleplayer_email_address\": \"dewald@mobi.co.za\",\n            \"policy_roleplayer_id_number\": \"8410078534081\",\n            \"policy_roleplayer_passport_number\": \"A21215164\",\n            \"policy_roleplayer_date_of_birth\": \"1984-10-07\",\n            \"policy_roleplayer_age\": 35,\n            \"policy_roleplayer_external_customer_reference\": \"who knows\",\n            \"policy_roleplayer_relationship_to_owner\": \"Director\"\n        },\n        {\n            \"policy_roleplayer_type\": \"Authorised Individual\",\n            \"policy_roleplayer_firstname\": \"Name\",\n            \"policy_roleplayer_middlename\": \"\",\n            \"policy_roleplayer_initials\": \"N\",\n            \"policy_roleplayer_lastname\": \"Test\",\n            \"policy_roleplayer_cellphone\": \"27825667172\",\n            \"policy_roleplayer_email_address\": \"dewald@mobi.co.za\",\n            \"policy_roleplayer_id_number\": \"8410078534081\",\n            \"policy_roleplayer_passport_number\": \"A21215164\",\n            \"policy_roleplayer_date_of_birth\": \"1984-10-07\",\n            \"policy_roleplayer_age\": \"35\",\n            \"policy_roleplayer_external_customer_reference\": \"who knows\",\n            \"policy_roleplayer_relationship_to_owner\": \"Director\"\n        }\n    ],\n    \"benefit_array\": [\n        {\n            \"benefit_id\": \"1\",\n            \"benefit_premium\": \"50.00\",\n            \"benefit_amount\": \"200\",\n            \"benefit_term\": \"1\",\n            \"benefit_frequency\": \"1\",\n            \"benefit_fee\": \"0\",\n            \"benefit_roleplayer_array\": [\n                {\n                    \"benefit_roleplayer_type\": \"Life Assured\",\n                    \"benefit_roleplayer_firstname\": \"LA1\",\n                    \"benefit_roleplayer_lastname\": \"Name\",\n                    \"benefit_roleplayer_gender\": \"Male\",\n                    \"benefit_roleplayer_cellphone\": \"27825667172\",\n                    \"benefit_roleplayer_email_address\": \"dewald@mobi.co.za\",\n                    \"benefit_roleplayer_id_number\": \"8410078534081\",\n                    \"benefit_roleplayer_date_of_birth\": \"1984-10-07\",\n                    \"benefit_roleplayer_age\": \"35\",\n                    \"benefit_roleplayer_external_customer_reference\": \"Who Knows\",\n                    \"benefit_roleplayer_relationship_to_owner\": \"\",\n                    \"underwriting_reference\": \"1\"\n                }\n            ]\n        },\n        {\n            \"benefit_id\": \"2\",\n            \"benefit_premium\": \"40.00\",\n            \"benefit_amount\": \"100\",\n            \"benefit_term\": \"1\",\n            \"benefit_frequency\": \"1\",\n            \"benefit_fee\": \"0\",\n            \"benefit_roleplayer_array\": [\n                {\n                    \"benefit_roleplayer_type\": \"Life Assured\",\n                    \"benefit_roleplayer_firstname\": \"LA2\",\n                    \"benefit_roleplayer_lastname\": \"Spouse\",\n                    \"benefit_roleplayer_gender\": \"Female\",\n                    \"benefit_roleplayer_cellphone\": \"27825667172\",\n                    \"benefit_roleplayer_email_address\": \"dewald@mobi.co.za\",\n                    \"benefit_roleplayer_id_number\": \"8811160309086\",\n                    \"benefit_roleplayer_date_of_birth\": \"1988-11-16\",\n                    \"benefit_roleplayer_age\": \"31\",\n                    \"benefit_roleplayer_external_customer_reference\": \"Who Knows\",\n                    \"benefit_roleplayer_relationship_to_owner\": \"Spouse\",\n                    \"underwriting_reference\": \"1\"\n                }\n            ]\n        }\n    ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/sale.php/upload/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Upload Sale BLP - K Test",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer: 123123123123123123123123123"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n   \"apikey\":\"<<api_key>>\",\n   \"sale_reference_id\":\"\",\n   \"product_id\":\"29\",\n   \"abi\":5,\n   \"sale_channel\":\"Customer First\",\n   \"consultant_code\":\"A246164\",\n   \"policy_net_premium\":6.63,\n   \"one_time_pin_number\":0,\n   \"one_time_pin_date_time\":\"0001-01-01T00:00:00\",\n   \"policy_note\":\"Notes:,Compliance 1999/065181/23:CLEAR,Compliance 9103065838180:CLEAR\",\n   \"lead_id\":null,\n   \"loan_account_array\":[\n      {\n         \"loan_account_number\":\"0000010009759909\",\n         \"outstanding_loan_amount\":15678,\n         \"instalment_amount\":422.56,\n         \"cycle_day\":0,\n         \"facility_amount\":15678,\n         \"credit_agreement_type\":\"Business Overdraft\"\n      }\n   ],\n   \"policy_roleplayer_array\":[\n      {\n         \"policy_roleplayer_type\":\"Owner\",\n         \"policy_roleplayer_firstname\":\"10RIO RIDGE 1073 CC\",\n         \"policy_roleplayer_middlename\":null,\n         \"policy_roleplayer_initials\":null,\n         \"policy_roleplayer_lastname\":null,\n         \"policy_roleplayer_gender\":null,\n         \"policy_roleplayer_cellphone\":\"\",\n         \"policy_roleplayer_email_address\":\"ownerof@blp.com\",\n         \"policy_roleplayer_id_number\":null,\n         \"policy_roleplayer_passport_number\":null,\n         \"policy_roleplayer_date_of_birth\":\"1999-08-09\",\n         \"policy_roleplayer_age\":\"0\",\n         \"policy_roleplayer_external_customer_reference\":\"4553ed7c-ae10-00d8-0000-00000ab6f52b\",\n         \"policy_roleplayer_relationship_to_owner\":null,\n         \"passport_data\":null,\n         \"address_array\":null\n      },\n      {\n         \"policy_roleplayer_type\":\"Contact Person\",\n         \"policy_roleplayer_firstname\":\"HYLTON\",\n         \"policy_roleplayer_middlename\":null,\n         \"policy_roleplayer_initials\":\"H\",\n         \"policy_roleplayer_lastname\":\"ZABA\",\n         \"policy_roleplayer_gender\":\"M\",\n         \"policy_roleplayer_cellphone\":null,\n         \"policy_roleplayer_email_address\":\"contact@testcentre.com\",\n         \"policy_roleplayer_id_number\":\"9103069359084\",\n         \"policy_roleplayer_passport_number\":\"\",\n         \"policy_roleplayer_date_of_birth\":\"1991-03-06\",\n         \"policy_roleplayer_age\":\"35\",\n         \"policy_roleplayer_external_customer_reference\":null,\n         \"policy_roleplayer_relationship_to_owner\":\"MEMBER\",\n         \"passport_data\":{\n            \"country_of_birth\":null,\n            \"country_of_citizenship\":null,\n            \"country_of_issue\":null,\n            \"nationality\":null,\n            \"country_of_residence\":null,\n            \"passport_date_of_issue\":null,\n            \"passport_expiry_date\":null,\n            \"visa_or_permit_type_code\":null,\n            \"visa_or_permit_number\":null,\n            \"visa_or_permit_issue_date\":null,\n            \"visa_or_permit_expiry_date\":null\n         },\n         \"address_array\":null\n      }\n   ],\n   \"benefit_array\":[\n      {\n         \"benefit_roleplayer_array\":[\n            {\n               \"benefit_roleplayer_type\":\"Life Assured\",\n               \"benefit_roleplayer_firstname\":\"HYLTON\",\n               \"benefit_roleplayer_middlename\":null,\n               \"benefit_roleplayer_initials\":\"H\",\n               \"benefit_roleplayer_lastname\":\"ZABA\",\n               \"benefit_roleplayer_gender\":\"M\",\n               \"benefit_roleplayer_cellphone\":null,\n               \"benefit_roleplayer_email_address\":\"imhere@testcentre.com\",\n               \"benefit_roleplayer_id_number\":\"9103069359084\",\n               \"benefit_roleplayer_passport_number\":\"\",\n               \"benefit_roleplayer_date_of_birth\":\"1991-03-06\",\n               \"benefit_roleplayer_age\":null,\n               \"benefit_roleplayer_external_customer_reference\":null,\n               \"benefit_roleplayer_relationship_to_owner\":\"MEMBER\",\n               \"underwriting_reference\":null,\n               \"benefit_roleplayer_percentage\":null\n            }\n         ],\n         \"benefit_id\":1,\n         \"benefit_premium\":6.63,\n         \"benefit_amount\":0,\n         \"benefit_term\":\"1\",\n         \"benefit_frequency\":\"1\",\n         \"benefit_fee\":\"0.0\",\n         \"benefit_sum_assured\":0,\n         \"benefit_discount_percent\":null\n      }\n   ],\n   \"status\":\"incomplete\",\n   \"owner_sa_id_no\":null,\n   \"owner_passport_no\":null,\n   \"bank_name\":null,\n   \"bank_branch_code\":null,\n   \"bank_account_no\":null,\n   \"bank_account_type\":null,\n   \"debit_day\":\"1\",\n   \"last_skip_date\":\"\",\n   \"policy_fee\":\"0.00\",\n   \"policy_discount_rand\":null,\n   \"policy_discount_percent\":null,\n   \"waive_waiting_period\":null,\n   \"campaign_code\":null,\n   \"promo_code\":null,\n   \"owner_registration_no\":\"1999/065181/23\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/sale.php/upload/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "1 : Get Benefit Premium - Duplicate",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"apikey\": \"<<api_key>>\",\r\n    \"call_id\": \"cbdbe215-abc6-4ad0-a26a-ee3ffeee7ee3\",\r\n    \"product_id\": \"1\",\r\n    \"frequency\": \"Annual\",\r\n    \"benefit_array\": [\r\n        {\r\n            \"benefit_id\": \"Main\",\r\n            \"benefit\": \"1\",\r\n            \"age\": 37,\r\n            \"gender\": \"F\",\r\n            \"benefit_amount\": 100000.0\r\n        },\r\n        {\r\n            \"benefit_id\": \"Spouse\",\r\n            \"benefit\": \"2\",\r\n            \"age\": 37,\r\n            \"gender\": \"F\",\r\n            \"benefit_amount\": 175000.0\r\n        }\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/product.php/getBenefitPremium/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Upload Sale BLP - Duplicate",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer: 123123123123123123123123123"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"apikey\": \"<<api_key>>\",\n    //\"sale_reference_id\": \"TestFlexiLife6\",\n    \"product_id\": \"1\",\n    \"owner_registration_no\": \"2025/329384/3414\",\n    \"sale_channel\": \"Test Channel\",\n    \"consultant_code\": \"12345\",\n    \"bank_name\": \"ABSA\",\n    \"bank_branch_code\": \"121212\",\n    \"bank_account_no\": \"000000000012345678900\",\n    \"bank_account_type\": \"Savings\",\n    \"debit_day\": \"-1\",\n    \"last_skip_date\": \"\",\n    \"policy_net_premium\": \"100\",\n    \"policy_fee\": \"0\", // this will be overwritten by PAS\n    \"policy_discount_rand\": \"0\",\n    \"policy_discount_percent\": \"0\", // this will be in addition to number of lives and outstanding loan amount discounts\n    \"policy_note\": \"Just a policy note\", //this could, for example even include a reference number to the Filenet location of the signed quote document\n    \"promo_code\": \"Just a promo code\",\n    \"mandate_reference_number\": \"\", //will not be relevant for this product\n    \"collection_method\": \"Loan Account\", //or \"SSVS\" in future\n    \"loan_account_array\": [\n        {\n            \"loan_account_number\": \"123123123\",\n            \"outstanding_loan_amount\": 1234.56,\n            \"instalment_amount\": 345.67,\n            // \"cycle_day\": 25, - this is removed even though it was in spec because the BCB API for loan account information updates do not include cycle_day and hence this will not be included in sale upload anymore either\n            // \"facility_amount\": 50000.00, - this is removed as we have been advised that at point of sale the value (which are pointless from a PAS perspective as they will be updated at premium collection date in any case) will  be the same as outstanding_loan_amount\n            \"credit_agreement_type\": \"Business Overdraft\"\n        }\n    ],\n    \"policy_roleplayer_array\": [\n        {\n            \"policy_roleplayer_type\": \"Contact Person\",\n            \"policy_roleplayer_firstname\": \"ContactName\",\n            \"policy_roleplayer_middlename\": \"\",\n            \"policy_roleplayer_initials\": \"N\",\n            \"policy_roleplayer_lastname\": \"ContactSurname\",\n            \"policy_roleplayer_cellphone\": \"27825667172\",\n            \"policy_roleplayer_email_address\": \"\",\n            \"policy_roleplayer_id_number\": \"8410078534081\",\n            \"policy_roleplayer_passport_number\": \"A12345\",\n            \"policy_roleplayer_date_of_birth\": \"1984-10-07\",\n            \"policy_roleplayer_age\": 35,\n            \"policy_roleplayer_external_customer_reference\": \"SomeGUID\",\n            \"policy_roleplayer_relationship_to_owner\": \"Director\"\n        },\n        {\n            \"policy_roleplayer_type\": \"Authorised Individual\",\n            \"policy_roleplayer_firstname\": \"Name\",\n            \"policy_roleplayer_middlename\": \"\",\n            \"policy_roleplayer_initials\": \"N\",\n            \"policy_roleplayer_lastname\": \"Main\",\n            \"policy_roleplayer_cellphone\": \"27825667172\",\n            \"policy_roleplayer_email_address\": \"dewald@mobi.co.za\",\n            \"policy_roleplayer_id_number\": \"8410078534081\",\n            \"policy_roleplayer_passport_number\": \"A21215164\",\n            \"policy_roleplayer_date_of_birth\": \"1984-10-07\",\n            \"policy_roleplayer_age\": 35,\n            \"policy_roleplayer_external_customer_reference\": \"who knows\",\n            \"policy_roleplayer_relationship_to_owner\": \"Director\"\n        },\n        {\n            \"policy_roleplayer_type\": \"Authorised Individual\",\n            \"policy_roleplayer_firstname\": \"Name\",\n            \"policy_roleplayer_middlename\": \"\",\n            \"policy_roleplayer_initials\": \"N\",\n            \"policy_roleplayer_lastname\": \"Test\",\n            \"policy_roleplayer_cellphone\": \"27825667172\",\n            \"policy_roleplayer_email_address\": \"dewald@mobi.co.za\",\n            \"policy_roleplayer_id_number\": \"8410078534081\",\n            \"policy_roleplayer_passport_number\": \"A21215164\",\n            \"policy_roleplayer_date_of_birth\": \"1984-10-07\",\n            \"policy_roleplayer_age\": \"35\",\n            \"policy_roleplayer_external_customer_reference\": \"who knows\",\n            \"policy_roleplayer_relationship_to_owner\": \"Director\"\n        }\n    ],\n    \"benefit_array\": [\n        {\n            \"benefit_id\": \"1\",\n            \"benefit_premium\": \"50.00\",\n            \"benefit_amount\": \"200\",\n            \"benefit_term\": \"1\",\n            \"benefit_frequency\": \"1\",\n            \"benefit_fee\": \"0\",\n            \"benefit_roleplayer_array\": [\n                {\n                    \"benefit_roleplayer_type\": \"Life Assured\",\n                    \"benefit_roleplayer_firstname\": \"LA1\",\n                    \"benefit_roleplayer_lastname\": \"Name\",\n                    \"benefit_roleplayer_gender\": \"Male\",\n                    \"benefit_roleplayer_cellphone\": \"27825667172\",\n                    \"benefit_roleplayer_email_address\": \"dewald@mobi.co.za\",\n                    \"benefit_roleplayer_id_number\": \"8410078534081\",\n                    \"benefit_roleplayer_date_of_birth\": \"1984-10-07\",\n                    \"benefit_roleplayer_age\": \"35\",\n                    \"benefit_roleplayer_external_customer_reference\": \"Who Knows\",\n                    \"benefit_roleplayer_relationship_to_owner\": \"\",\n                    \"underwriting_reference\": \"1\"\n                }\n            ]\n        },\n        {\n            \"benefit_id\": \"2\",\n            \"benefit_premium\": \"40.00\",\n            \"benefit_amount\": \"100\",\n            \"benefit_term\": \"1\",\n            \"benefit_frequency\": \"1\",\n            \"benefit_fee\": \"0\",\n            \"benefit_roleplayer_array\": [\n                {\n                    \"benefit_roleplayer_type\": \"Life Assured\",\n                    \"benefit_roleplayer_firstname\": \"LA2\",\n                    \"benefit_roleplayer_lastname\": \"Spouse\",\n                    \"benefit_roleplayer_gender\": \"Female\",\n                    \"benefit_roleplayer_cellphone\": \"27825667172\",\n                    \"benefit_roleplayer_email_address\": \"dewald@mobi.co.za\",\n                    \"benefit_roleplayer_id_number\": \"8811160309086\",\n                    \"benefit_roleplayer_date_of_birth\": \"1988-11-16\",\n                    \"benefit_roleplayer_age\": \"31\",\n                    \"benefit_roleplayer_external_customer_reference\": \"Who Knows\",\n                    \"benefit_roleplayer_relationship_to_owner\": \"Spouse\",\n                    \"underwriting_reference\": \"1\"\n                }\n            ]\n        }\n    ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/sale.php/upload/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Upload Sale BLP - Duplicate",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer: 123123123123123123123123123"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"apikey\": \"<<api_key>>\",\n    //\"sale_reference_id\": \"TestFlexiLife6\",\n    \"product_id\": \"29\",\n    \"owner_registration_no\": \"2025/329384/3414\",\n    \"sale_channel\": \"Test Channel\",\n    \"consultant_code\": \"12345\",\n    \"bank_name\": \"ABSA\",\n    \"bank_branch_code\": \"121212\",\n    \"bank_account_no\": \"000000000012345678900\",\n    \"bank_account_type\": \"Savings\",\n    \"debit_day\": \"-1\",\n    \"last_skip_date\": \"\",\n    \"policy_net_premium\": \"100\",\n    \"policy_fee\": \"0\", // this will be overwritten by PAS\n    \"policy_discount_rand\": \"0\",\n    \"policy_discount_percent\": \"0\", // this will be in addition to number of lives and outstanding loan amount discounts\n    \"policy_note\": \"Just a policy note\", //this could, for example even include a reference number to the Filenet location of the signed quote document\n    \"promo_code\": \"Just a promo code\",\n    \"mandate_reference_number\": \"\", //will not be relevant for this product\n    \"collection_method\": \"Loan Account\", //or \"SSVS\" in future\n    \"loan_account_array\": [\n        {\n            \"loan_account_number\": \"123123123\",\n            \"outstanding_loan_amount\": 1234.56,\n            \"instalment_amount\": 345.67,\n            // \"cycle_day\": 25, - this is removed even though it was in spec because the BCB API for loan account information updates do not include cycle_day and hence this will not be included in sale upload anymore either\n            // \"facility_amount\": 50000.00, - this is removed as we have been advised that at point of sale the value (which are pointless from a PAS perspective as they will be updated at premium collection date in any case) will  be the same as outstanding_loan_amount\n            \"credit_agreement_type\": \"Business Overdraft\"\n        }\n    ],\n    \"policy_roleplayer_array\": [\n        {\n            \"policy_roleplayer_type\": \"Contact Person\",\n            \"policy_roleplayer_firstname\": \"ContactName\",\n            \"policy_roleplayer_middlename\": \"\",\n            \"policy_roleplayer_initials\": \"N\",\n            \"policy_roleplayer_lastname\": \"ContactSurname\",\n            \"policy_roleplayer_cellphone\": \"27825667172\",\n            \"policy_roleplayer_email_address\": \"\",\n            \"policy_roleplayer_id_number\": \"8410078534081\",\n            \"policy_roleplayer_passport_number\": \"A12345\",\n            \"policy_roleplayer_date_of_birth\": \"1984-10-07\",\n            \"policy_roleplayer_age\": 35,\n            \"policy_roleplayer_external_customer_reference\": \"SomeGUID\",\n            \"policy_roleplayer_relationship_to_owner\": \"Director\"\n        },\n        {\n            \"policy_roleplayer_type\": \"Authorised Individual\",\n            \"policy_roleplayer_firstname\": \"Name\",\n            \"policy_roleplayer_middlename\": \"\",\n            \"policy_roleplayer_initials\": \"N\",\n            \"policy_roleplayer_lastname\": \"Main\",\n            \"policy_roleplayer_cellphone\": \"27825667172\",\n            \"policy_roleplayer_email_address\": \"dewald@mobi.co.za\",\n            \"policy_roleplayer_id_number\": \"8410078534081\",\n            \"policy_roleplayer_passport_number\": \"A21215164\",\n            \"policy_roleplayer_date_of_birth\": \"1984-10-07\",\n            \"policy_roleplayer_age\": 35,\n            \"policy_roleplayer_external_customer_reference\": \"who knows\",\n            \"policy_roleplayer_relationship_to_owner\": \"Director\"\n        },\n        {\n            \"policy_roleplayer_type\": \"Authorised Individual\",\n            \"policy_roleplayer_firstname\": \"Name\",\n            \"policy_roleplayer_middlename\": \"\",\n            \"policy_roleplayer_initials\": \"N\",\n            \"policy_roleplayer_lastname\": \"Test\",\n            \"policy_roleplayer_cellphone\": \"27825667172\",\n            \"policy_roleplayer_email_address\": \"dewald@mobi.co.za\",\n            \"policy_roleplayer_id_number\": \"8410078534081\",\n            \"policy_roleplayer_passport_number\": \"A21215164\",\n            \"policy_roleplayer_date_of_birth\": \"1984-10-07\",\n            \"policy_roleplayer_age\": \"35\",\n            \"policy_roleplayer_external_customer_reference\": \"who knows\",\n            \"policy_roleplayer_relationship_to_owner\": \"Director\"\n        }\n    ],\n    \"benefit_array\": [\n        {\n            \"benefit_id\": \"1\",\n            \"benefit_premium\": \"50.00\",\n            \"benefit_amount\": \"200\",\n            \"benefit_term\": \"1\",\n            \"benefit_frequency\": \"1\",\n            \"benefit_fee\": \"0\",\n            \"benefit_roleplayer_array\": [\n                {\n                    \"benefit_roleplayer_type\": \"Life Assured\",\n                    \"benefit_roleplayer_firstname\": \"LA1\",\n                    \"benefit_roleplayer_lastname\": \"Name\",\n                    \"benefit_roleplayer_gender\": \"Male\",\n                    \"benefit_roleplayer_cellphone\": \"27825667172\",\n                    \"benefit_roleplayer_email_address\": \"dewald@mobi.co.za\",\n                    \"benefit_roleplayer_id_number\": \"8410078534081\",\n                    \"benefit_roleplayer_date_of_birth\": \"1984-10-07\",\n                    \"benefit_roleplayer_age\": \"35\",\n                    \"benefit_roleplayer_external_customer_reference\": \"Who Knows\",\n                    \"benefit_roleplayer_relationship_to_owner\": \"\",\n                    \"underwriting_reference\": \"1\"\n                }\n            ]\n        },\n        {\n            \"benefit_id\": \"2\",\n            \"benefit_premium\": \"40.00\",\n            \"benefit_amount\": \"100\",\n            \"benefit_term\": \"1\",\n            \"benefit_frequency\": \"1\",\n            \"benefit_fee\": \"0\",\n            \"benefit_roleplayer_array\": [\n                {\n                    \"benefit_roleplayer_type\": \"Life Assured\",\n                    \"benefit_roleplayer_firstname\": \"LA2\",\n                    \"benefit_roleplayer_lastname\": \"Spouse\",\n                    \"benefit_roleplayer_gender\": \"Female\",\n                    \"benefit_roleplayer_cellphone\": \"27825667172\",\n                    \"benefit_roleplayer_email_address\": \"dewald@mobi.co.za\",\n                    \"benefit_roleplayer_id_number\": \"8811160309086\",\n                    \"benefit_roleplayer_date_of_birth\": \"1988-11-16\",\n                    \"benefit_roleplayer_age\": \"31\",\n                    \"benefit_roleplayer_external_customer_reference\": \"Who Knows\",\n                    \"benefit_roleplayer_relationship_to_owner\": \"Spouse\",\n                    \"underwriting_reference\": \"1\"\n                }\n            ]\n        }\n    ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/sale.php/upload/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "11 : Upload Amended Policy Rule Enabled - WPED Test",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"apikey\": \"vNPKS1opVvHQUFdpzQR5625o6an4GAYxFknoI876RUD9JbFHCB\",\n    \"policy_number\": \"NFA23295\",\n    \"product_id\": \"26\",\n    \"status\": \"complete\",\n    \"policy_payload_id\": \"d3b6066a7d03dc27612056f36d490b97\",\n    \"policy_payload\": {\n    \"owner_passport_no\": null,\n    \"bank_name\": null,\n    \"bank_branch_code\": \"082172\",\n    \"bank_account_type\": null,\n    \"bank_account_no\": \"60007393678\",\n    \"debit_day\": null,\n    \"abi\": null,\n    \"consultant_code\": null,\n    \"policy_fee\": null,\n    \"third_party_policy\": null,\n    \"policy_discount_rand\": null,\n    \"policy_discount_percent\": null,\n    \"policy_nett_premium\": \"0\",\n    \"last_skip_date\": null,\n    \"collection_method\": \"EEFT\",\n    \"waive_waiting_period\": null,\n    \"policy_note\": null,\n    \"owner_registration_no\": null,\n    \"status\": \"Active\",\n    \"policy_number\": \"NFA23295\",\n    \"product\": \"Namibia Flexible Funeral Plan\",\n    \"owner_first_name\": null,\n    \"owner_last_name\": null,\n    \"owner_cellphone\": \"12345\",\n    \"owner_email_address\": null,\n    \"sum_assured\": \"0\",\n    \"external_policy_number\": \"60007393678PERS\",\n    \"date_created\": \"2026-03-16 10:37:27\",\n    \"owner_id_no\": null,\n    \"owner_sa_id_no\": null,\n    \"anniversary_date\": \"2026-10-26 00:00:00\",\n    \"inception_date\": \"2025-10-26 00:00:00\",\n    \"contract_status_date_time\": \"2026-03-16 10:37:27\",\n    \"contract_status_reason\": null,\n    \"contract_status_reason_date\": \"2026-03-16\",\n    \"automatic_contribution_increase\": null,\n    \"cover_percentage\": \"100\",\n    \"owner_age\": \"54\",\n    \"servicing_channel\": null,\n    \"servicing_agent\": null,\n    \"sale_channel\": null,\n    \"policy_end_date\": null,\n    \"campaign_code\": null,\n    \"promo_code\": null,\n    \"mandate_reference_number\": null,\n    \"lead_id\": null,\n    \"owner_registration_type\": null,\n    \"policy_roleplayer_array\": [\n      {\n        \"policy_roleplayer_type\": \"Primary Life Assured\",\n        \"policy_roleplayer_firstname\": null,\n        \"policy_roleplayer_middlename\": null,\n        \"policy_roleplayer_initials\": null,\n        \"policy_roleplayer_lastname\": null,\n        \"policy_roleplayer_cellphone\": \"12345\",\n        \"policy_roleplayer_email_address\": null,\n        \"policy_roleplayer_id_number\": null,\n        \"policy_roleplayer_passport_number\": null,\n        \"policy_roleplayer_date_of_birth\": \"1971-10-20\",\n        \"policy_roleplayer_external_customer_reference\": \"346502414\",\n        \"policy_roleplayer_relationship_to_owner\": null,\n        \"policy_roleplayer_relationship_to\": null,\n        \"policy_roleplayer_percentage\": null,\n        \"policy_roleplayer_unique_identifier\": \"NFA23295RP0033262656\",\n        \"policy_roleplayer_gender\": \"M\",\n        \"passport_data\": {},\n        \"address_array\": []\n      },\n      {\n        \"policy_roleplayer_type\": \"Owner\",\n        \"policy_roleplayer_firstname\": null,\n        \"policy_roleplayer_middlename\": null,\n        \"policy_roleplayer_initials\": null,\n        \"policy_roleplayer_lastname\": null,\n        \"policy_roleplayer_cellphone\": \"12345\",\n        \"policy_roleplayer_email_address\": null,\n        \"policy_roleplayer_id_number\": null,\n        \"policy_roleplayer_passport_number\": null,\n        \"policy_roleplayer_date_of_birth\": \"1971-10-20\",\n        \"policy_roleplayer_external_customer_reference\": \"346502414\",\n        \"policy_roleplayer_relationship_to_owner\": null,\n        \"policy_roleplayer_relationship_to\": null,\n        \"policy_roleplayer_percentage\": null,\n        \"policy_roleplayer_unique_identifier\": \"NFA23295RP0033262657\",\n        \"policy_roleplayer_gender\": \"M\",\n        \"passport_data\": {},\n        \"address_array\": []\n      },\n      {\n        \"policy_roleplayer_type\": \"Account Payer\",\n        \"policy_roleplayer_firstname\": null,\n        \"policy_roleplayer_middlename\": null,\n        \"policy_roleplayer_initials\": null,\n        \"policy_roleplayer_lastname\": null,\n        \"policy_roleplayer_cellphone\": \"12345\",\n        \"policy_roleplayer_email_address\": null,\n        \"policy_roleplayer_id_number\": null,\n        \"policy_roleplayer_passport_number\": null,\n        \"policy_roleplayer_date_of_birth\": \"1971-10-20\",\n        \"policy_roleplayer_external_customer_reference\": \"346502414\",\n        \"policy_roleplayer_relationship_to_owner\": null,\n        \"policy_roleplayer_relationship_to\": null,\n        \"policy_roleplayer_percentage\": null,\n        \"policy_roleplayer_unique_identifier\": \"NFA23295RP0033262658\",\n        \"policy_roleplayer_gender\": \"M\",\n        \"passport_data\": {},\n        \"address_array\": []\n      }\n    ],\n    \"benefit_array\": [\n      {\n        \"benefit_id\": \"4\",\n        \"benefit_premium\": \"10111.911\",\n        \"benefit_amount\": \"10111.911\",\n        \"benefit_sum_assured\": \"10111.911\",\n        \"benefit_term\": \"1\",\n        \"benefit_frequency\": null,\n        \"benefit_discount_percent\": null,\n        \"benefit_fee\": null,\n        \"em_loading\": null,\n        \"pm_loading\": null,\n        \"gross_monthly_income\": null,\n        \"credit_score\": null,\n        \"bank_risk_score\": null,\n        \"benefit_status\": \"Active\",\n        \"benefit_unique_identifier\": \"NFA23295B0012255583\",\n        \"benefit_underwriting_array\": [],\n        \"benefit_roleplayer_array\": [\n          {\n            \"benefit_roleplayer_type\": \"Life Assured\",\n            \"benefit_roleplayer_firstname\": \"Player\",\n            \"benefit_roleplayer_middlename\": null,\n            \"benefit_roleplayer_initials\": null,\n            \"benefit_roleplayer_lastname\": \"Ops\",\n            \"benefit_roleplayer_cellphone\": \"12345\",\n            \"benefit_roleplayer_email_address\": null,\n            \"benefit_roleplayer_id_number\": null,\n            \"benefit_roleplayer_passport_number\": null,\n            \"benefit_roleplayer_date_of_birth\": \"1971-10-20\",\n            \"benefit_roleplayer_external_customer_reference\": null,\n            \"benefit_roleplayer_relationship_to_owner\": null,\n            \"benefit_roleplayer_relationship_to\": null,\n            \"benefit_roleplayer_percentage\": null,\n            \"benefit_roleplayer_unique_identifier\": \"NFA23295BRP0033262659\",\n            \"benefit_roleplayer_gender\": \"M\",\n            \"passport_data\": {}\n          }\n        ]\n      }\n    ],\n    \"loan_account_array\": []\n  }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/service.php/uploadAmendedPolicy/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Wrap Claim",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"apikey\":\"<<api_key>>\",\n    \"claim_event_number\":\"93c48633e5\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/claim.php/retrieveClaim/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "updateIndividual",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\"apikey\":\"PbrRcW2zdbkjWgwdzhqXy0hRzyON16WbAmpXDrK8fKe9L900XK\",\n\"identifying_details\": {\n\n\"id_number\": \"9206300155186\",\n\"firstname\": \"Sapula\",\n\"lastname\": \"MainInsured\",\n\"date_of_birth\": \"1992-06-30\"\n},\n\"individual_details_array\": {\n\"individual_firstname\": \"\",\n\"individual_middlename\": \"\",\n\"individual_initials\": \"\",\n\"individual_lastname\": \"Lambs\",\n\"individual_cellphone\": \"\",\n\"individual_email_address\": \"\",\n\"individual_id_number\": \"\",\n\"individual_passport_number\": \"\",\n\"individual_date_of_birth\": \"\",\n\"individual_gender\": \"\"\n},\n\"policy_note\": \"Update to align info\",\n\"servicing_agent\": \"AA123123\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/service.php/updateIndividual/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Integrated Life: getMaximumCoverUnlockLimit",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer: 123123123123123123123123123"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"apikey\": \"<<api_key>>\",\n    \"call_id\": \"8857de7d19fb0e2132633d116b92e40b\",\n    \"product_id\": \"3\",\n    \"policy_number\": \"TLA180647\",\n    \"external_policy_number\": \"FLP100006116\",\n    \"sale_channel\": \"Call Center\",\n    \"demographic\": \"Key Person\",\n    \"benefit_array\": [\n        {\n            \"benefit_id\": 1,\n            \"credit_score\": 600,\n            \"gross_monthly_income\": 20000,\n            \"bank_risk_score\": 55,\n            \"underwriting_level\": 1,\n            \"benefit_roleplayer_array\": [\n                {\n                  \"benefit_roleplayer_type\": \"Life Assured\",\n                  \"benefit_roleplayer_firstname\": \"Lucy\",\n                  \"benefit_roleplayer_middlename\": null,\n                  \"benefit_roleplayer_initials\": \"L\",\n                  \"benefit_roleplayer_lastname\": \"Test\",\n                  \"benefit_roleplayer_cellphone\": \"0673098335\",\n                  \"benefit_roleplayer_email_address\": null,\n                  \"benefit_roleplayer_id_number\": \"9507035148087\",\n                  \"benefit_roleplayer_passport_number\": null,\n                  \"benefit_roleplayer_date_of_birth\": \"1995-07-03\",\n                  \"benefit_roleplayer_external_customer_reference\": null,\n                  \"benefit_roleplayer_relationship_to_owner\": \"PREMIUMPAYER\",\n                  \"benefit_roleplayer_relationship_to\": null,\n                  \"benefit_roleplayer_percentage\": null,\n                  \"benefit_roleplayer_unique_identifier\": \"TLA180647BRP0040100608\",\n                  \"benefit_roleplayer_gender\": \"M\",\n                  \"passport_data\": {}\n                }\n            ]\n        }\n    ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/product.php/getMaximumCoverUnlockLimit/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "2 : Upload Sale Rule Enabled - KT",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer: 123123123123123123123123123"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "/*{\n   \"apikey\": \"<<api_key>>\",\n   \"sale_reference_id\": \"\",\n   \"product_id\": \"29\",\n   \"abi\": 5,\n   \"sale_channel\": \"Customer First\",\n   \"consultant_code\": \"A246164\",\n   \"policy_net_premium\": 6.63,\n   \"one_time_pin_number\": 0,\n   \"one_time_pin_date_time\": \"0001-01-01T00:00:00\",\n   \"policy_note\": \"Notes:,Compliance 1999/065181/23:CLEAR,Compliance 9103065838180:CLEAR\",\n   \"lead_id\": null,\n   \"loan_account_array\": [\n      {\n         \"loan_account_number\": \"0000010009759909\",\n         \"outstanding_loan_amount\": 15678,\n         \"instalment_amount\": 422.56,\n         \"cycle_day\": 0,\n         \"facility_amount\": 15678,\n         \"credit_agreement_type\": \"Business Overdraft\"\n      }\n   ],\n   \"policy_roleplayer_array\": [\n      {\n         \"policy_roleplayer_type\": \"Owner\",\n         \"policy_roleplayer_firstname\": \"10RIO RIDGE 1073 CC\",\n         \"policy_roleplayer_middlename\": null,\n         \"policy_roleplayer_initials\": null,\n         \"policy_roleplayer_lastname\": null,\n         \"policy_roleplayer_gender\": null,\n         \"policy_roleplayer_cellphone\": \"\",\n         \"policy_roleplayer_email_address\": \"ownerof@blp.com\",\n         \"policy_roleplayer_id_number\": null,\n         \"policy_roleplayer_passport_number\": null,\n         \"policy_roleplayer_date_of_birth\": \"1999-08-09\",\n         \"policy_roleplayer_age\": \"0\",\n         \"policy_roleplayer_external_customer_reference\": \"4553ed7c-ae10-00d8-0000-00000ab6f52b\",\n         \"policy_roleplayer_relationship_to_owner\": null,\n         \"passport_data\": null,\n         \"address_array\": null\n      },\n      {\n         \"policy_roleplayer_type\": \"Contact Person\",\n         \"policy_roleplayer_firstname\": \"HYLTON\",\n         \"policy_roleplayer_middlename\": null,\n         \"policy_roleplayer_initials\": \"H\",\n         \"policy_roleplayer_lastname\": \"ZABA\",\n         \"policy_roleplayer_gender\": \"M\",\n         \"policy_roleplayer_cellphone\": null,\n         \"policy_roleplayer_email_address\": \"contact@testcentre.com\",\n         \"policy_roleplayer_id_number\": \"9103069359084\",\n         \"policy_roleplayer_passport_number\": \"\",\n         \"policy_roleplayer_date_of_birth\": \"1991-03-06\",\n         \"policy_roleplayer_age\": \"35\",\n         \"policy_roleplayer_external_customer_reference\": null,\n         \"policy_roleplayer_relationship_to_owner\": \"MEMBER\",\n         \"passport_data\": {\n            \"country_of_birth\": null,\n            \"country_of_citizenship\": null,\n            \"country_of_issue\": null,\n            \"nationality\": null,\n            \"country_of_residence\": null,\n            \"passport_date_of_issue\": null,\n            \"passport_expiry_date\": null,\n            \"visa_or_permit_type_code\": null,\n            \"visa_or_permit_number\": null,\n            \"visa_or_permit_issue_date\": null,\n            \"visa_or_permit_expiry_date\": null\n         },\n         \"address_array\": null\n      }\n   ],\n   \"benefit_array\": [\n      {\n         \"benefit_roleplayer_array\": [\n            {\n               \"benefit_roleplayer_type\": \"Life Assured\",\n               \"benefit_roleplayer_firstname\": \"HYLTON\",\n               \"benefit_roleplayer_middlename\": null,\n               \"benefit_roleplayer_initials\": \"H\",\n               \"benefit_roleplayer_lastname\": \"ZABA\",\n               \"benefit_roleplayer_gender\": \"M\",\n               \"benefit_roleplayer_cellphone\": null,\n               \"benefit_roleplayer_email_address\": \"imhere@testcentre.com\",\n               \"benefit_roleplayer_id_number\": \"9103069359084\",\n               \"benefit_roleplayer_passport_number\": \"\",\n               \"benefit_roleplayer_date_of_birth\": \"1991-03-06\",\n               \"benefit_roleplayer_age\": null,\n               \"benefit_roleplayer_external_customer_reference\": null,\n               \"benefit_roleplayer_relationship_to_owner\": \"MEMBER\",\n               \"underwriting_reference\": null,\n               \"benefit_roleplayer_percentage\": null\n            }\n         ],\n         \"benefit_id\": 1,\n         \"benefit_premium\": 6.63,\n         \"benefit_amount\": 0,\n         \"benefit_term\": \"1\",\n         \"benefit_frequency\": \"1\",\n         \"benefit_fee\": \"0.0\",\n         \"benefit_sum_assured\": 0,\n         \"benefit_discount_percent\": null\n      }\n   ],\n   \"status\": \"incomplete\",\n   \"owner_sa_id_no\": null,\n   \"owner_passport_no\": null,\n   \"bank_name\": null,\n   \"bank_branch_code\": null,\n   \"bank_account_no\": null,\n   \"bank_account_type\": null,\n   \"debit_day\": \"1\",\n   \"last_skip_date\": \"\",\n   \"policy_fee\": \"0.00\",\n   \"policy_discount_rand\": null,\n   \"policy_discount_percent\": null,\n   \"waive_waiting_period\": null,\n   \"campaign_code\": null,\n   \"promo_code\": null,\n   \"owner_registration_no\": \"1999/065181/23\"\n}*/\n\n{\n  \"apikey\": \"<<api_key>>\",\n  \"sale_reference_id\": \"\",\n  \"product_id\": \"3\",\n  \"abi\": 0,\n  \"sale_channel\": \"Call Center\",\n  \"consultant_code\": \"MulaloTest\",\n  \"policy_net_premium\": 604.17,\n  \"one_time_pin_number\": null,\n  \"one_time_pin_date_time\": \"2026-02-02T06:21:47.5046747Z\",\n  \"policy_note\": null,\n  \"lead_id\": null,\n  \"status\": \"incomplete\",\n  \"owner_sa_id_no\": \"9206300155186\",\n  \"owner_passport_no\": \"\",\n  \"bank_name\": \"CAPITEC BANK LMT\",\n  \"bank_branch_code\": \"470010\",\n  \"bank_account_no\": \"6745785214\",\n  \"bank_account_type\": \"SAVINGSACCOUNT\",\n  \"debit_day\": \"-1\",\n  \"last_skip_date\": \"1899-12-01\",\n  \"policy_fee\": \"0.0\",\n  \"policy_discount_rand\": null,\n  \"policy_discount_percent\": null,\n  \"waive_waiting_period\": \"0\",\n  \"campaign_code\": null,\n  \"promo_code\": null,\n  \"customer_segment\": 1,\n  \"commission_factor\": 3,\n  \"tax_deductibility_elected\": 1,\n  \"digi_code_data_array\": {\n    \"firstname\": \"\",\n    \"lastname\": \"\",\n    \"undersupervision\": \"false\",\n    \"underexemption\": \"false\",\n    \"employee_number\": null,\n  },\n  \"policy_roleplayer_array\": [\n    {\n      \"policy_roleplayer_type\": \"Account Payer\",\n      \"policy_roleplayer_firstname\": \"Sapula\",\n      \"policy_roleplayer_middlename\": null,\n      \"policy_roleplayer_initials\": \"M\",\n      \"policy_roleplayer_lastname\": \"MainInsured\",\n      \"policy_roleplayer_gender\": \"F\",\n      \"policy_roleplayer_cellphone\": \"0712345678\",\n      \"policy_roleplayer_email_address\": \"ThattGuy@gmail.com\",\n      \"policy_roleplayer_id_number\": \"9206300155186\",\n      \"policy_roleplayer_passport_number\": \"\",\n      \"policy_roleplayer_date_of_birth\": \"1992-06-30\",\n      \"policy_roleplayer_age\": \"33\",\n      \"policy_roleplayer_external_customer_reference\": null,\n      \"policy_roleplayer_relationship_to_owner\": \"PREMIUMPAYER\",\n      \"passport_data\": {\n        \"country_of_birth\": null,\n        \"country_of_citizenship\": null,\n        \"country_of_issue\": null,\n        \"nationality\": \"\",\n        \"country_of_residence\": \"\",\n        \"passport_date_of_issue\": null,\n        \"passport_expiry_date\": null,\n        \"visa_or_permit_type_code\": null,\n        \"visa_or_permit_number\": null,\n        \"visa_or_permit_issue_date\": null,\n        \"visa_or_permit_expiry_date\": null\n      },\n      \"address_array\": [\n        {\n          \"address_type\": \"POSTALADDRESS\",\n          \"address_line_one\": \"SQUARE RIGGER ST\",\n          \"address_line_two\": \"\",\n          \"address_line_three\": \"THE HEADS\",\n          \"country\": \"0\",\n          \"city\": null,\n          \"postal_code\": \"6571\"\n        }\n      ],\n      \"policy_roleplayer_salary\": 13000\n    },\n    {\n      \"policy_roleplayer_type\": \"Owner\",\n      \"policy_roleplayer_firstname\": \"Sapula\",\n      \"policy_roleplayer_middlename\": null,\n      \"policy_roleplayer_initials\": \"M\",\n      \"policy_roleplayer_lastname\": \"MainInsured\",\n      \"policy_roleplayer_gender\": \"F\",\n      \"policy_roleplayer_cellphone\": \"0712345678\",\n      \"policy_roleplayer_email_address\": \"ThattGuy@gmail.com\",\n      \"policy_roleplayer_id_number\": \"9206300155186\",\n      \"policy_roleplayer_passport_number\": \"\",\n      \"policy_roleplayer_date_of_birth\": \"1992-06-30\",\n      \"policy_roleplayer_age\": \"33\",\n      \"policy_roleplayer_external_customer_reference\": null,\n      \"policy_roleplayer_relationship_to_owner\": \"PREMIUMPAYER\",\n      \"passport_data\": {\n        \"country_of_birth\": null,\n        \"country_of_citizenship\": null,\n        \"country_of_issue\": null,\n        \"nationality\": \"\",\n        \"country_of_residence\": \"\",\n        \"passport_date_of_issue\": null,\n        \"passport_expiry_date\": null,\n        \"visa_or_permit_type_code\": null,\n        \"visa_or_permit_number\": null,\n        \"visa_or_permit_issue_date\": null,\n        \"visa_or_permit_expiry_date\": null\n      },\n      \"address_array\": null,\n      \"policy_roleplayer_salary\": 13000\n    },\n    {\n      \"policy_roleplayer_type\": \"Primary Life Assured\",\n      \"policy_roleplayer_firstname\": \"Sapula\",\n      \"policy_roleplayer_middlename\": null,\n      \"policy_roleplayer_initials\": \"M\",\n      \"policy_roleplayer_lastname\": \"MainInsured\",\n      \"policy_roleplayer_gender\": \"F\",\n      \"policy_roleplayer_cellphone\": \"0712345678\",\n      \"policy_roleplayer_email_address\": \"ThattGuy@gmail.com\",\n      \"policy_roleplayer_id_number\": \"9206300155186\",\n      \"policy_roleplayer_passport_number\": \"\",\n      \"policy_roleplayer_date_of_birth\": \"1992-06-30\",\n      \"policy_roleplayer_age\": \"33\",\n      \"policy_roleplayer_external_customer_reference\": null,\n      \"policy_roleplayer_relationship_to_owner\": \"PREMIUMPAYER\",\n      \"passport_data\": {\n        \"country_of_birth\": null,\n        \"country_of_citizenship\": null,\n        \"country_of_issue\": null,\n        \"nationality\": \"\",\n        \"country_of_residence\": \"\",\n        \"passport_date_of_issue\": null,\n        \"passport_expiry_date\": null,\n        \"visa_or_permit_type_code\": null,\n        \"visa_or_permit_number\": null,\n        \"visa_or_permit_issue_date\": null,\n        \"visa_or_permit_expiry_date\": null\n      },\n      \"address_array\": null,\n      \"policy_roleplayer_salary\": 13000\n    }\n  ],\n  \"benefit_array\": [\n    {\n      \"benefit_roleplayer_array\": [\n        {\n          \"benefit_roleplayer_type\": \"Life Assured\",\n          \"benefit_roleplayer_firstname\": \"Sapula\",\n          \"benefit_roleplayer_middlename\": null,\n          \"benefit_roleplayer_initials\": \"S\",\n          \"benefit_roleplayer_lastname\": \"MainInsured\",\n          \"benefit_roleplayer_gender\": \"F\",\n          \"benefit_roleplayer_cellphone\": \"0712345678\",\n          \"benefit_roleplayer_email_address\": \"ThattGuy@gmail.com\",\n          \"benefit_roleplayer_id_number\": \"9206300155186\",\n          \"benefit_roleplayer_passport_number\": \"\",\n          \"benefit_roleplayer_date_of_birth\": \"1992-06-30\",\n          \"benefit_roleplayer_age\": null,\n          \"benefit_roleplayer_external_customer_reference\": null,\n          \"benefit_roleplayer_relationship_to_owner\": \"PREMIUMPAYER\",\n          \"benefit_roleplayer_percentage\": null,\n          \"benefit_roleplayer_consent\": \"Yup\",\n          \"benefit_roleplayer_em_loading\": null,\n          \"benefit_roleplayer_pm_loading\": null,\n          \"benefit_roleplayer_education\": 5,\n          \"benefit_roleplayer_smoker_status\": 1,\n          \"benefit_roleplayer_gross_monthly_income\": 20000,\n          \"benefit_roleplayer_marital_status\": 2,\n          \"benefit_roleplayer_credit_score\": 1000,\n          \"benefit_roleplayer_bank_risk_score\": 50,\n          \"benefit_roleplayer_underwriting_level\": 2,\n          \"passport_data\": {\n            \"country_of_birth\": null,\n            \"country_of_citizenship\": null,\n            \"country_of_issue\": null,\n            \"nationality\": \"\",\n            \"country_of_residence\": \"\",\n            \"passport_date_of_issue\": null,\n            \"passport_expiry_date\": null,\n            \"visa_or_permit_type_code\": null,\n            \"visa_or_permit_number\": null,\n            \"visa_or_permit_issue_date\": null,\n            \"visa_or_permit_expiry_date\": null\n          }\n        },\n        {\n          \"benefit_roleplayer_type\": \"Beneficiary\",\n          \"benefit_roleplayer_firstname\": \"dffgd\",\n          \"benefit_roleplayer_middlename\": null,\n          \"benefit_roleplayer_initials\": \"d\",\n          \"benefit_roleplayer_lastname\": \"fggdg\",\n          \"benefit_roleplayer_gender\": \"M\",\n          \"benefit_roleplayer_cellphone\": \"27665773560\",\n          \"benefit_roleplayer_email_address\": null,\n          \"benefit_roleplayer_id_number\": \"9806036123084\",\n          \"benefit_roleplayer_passport_number\": \"\",\n          \"benefit_roleplayer_date_of_birth\": \"1998-06-03\",\n          \"benefit_roleplayer_age\": null,\n          \"benefit_roleplayer_external_customer_reference\": null,\n          \"benefit_roleplayer_relationship_to_owner\": \"UNKNOWN\",\n          \"benefit_roleplayer_percentage\": 100,\n          \"passport_data\": {\n            \"country_of_birth\": null,\n            \"country_of_citizenship\": null,\n            \"country_of_issue\": null,\n            \"nationality\": null,\n            \"country_of_residence\": null,\n            \"passport_date_of_issue\": null,\n            \"passport_expiry_date\": null,\n            \"visa_or_permit_type_code\": null,\n            \"visa_or_permit_number\": null,\n            \"visa_or_permit_issue_date\": null,\n            \"visa_or_permit_expiry_date\": null\n          }\n        }\n      ],\n      \"benefit_id\": 1,\n      \"benefit_premium\": 37.14,\n      \"benefit_amount\": 1000000,\n      \"benefit_term\": \"1\",\n      \"benefit_frequency\": \"1\",\n      \"benefit_fee\": \"0.0\",\n      \"benefit_underwriting_array\": [\n        {\n          \"question_number\": \"1\",\n          \"question\": \"Have you ever been refused long-term life insurance cover or offered cover on special terms?\",\n          \"answer\": \"No\",\n          \"question_details_array\": null\n        },\n        {\n          \"question_number\": \"2\",\n          \"question\": \"Have you been diagnosed with or had symptoms of any of the following?\",\n          \"answer\": \"No\",\n          \"question_details_array\": [\n            \"Tuberculosis (TB)\",\n            \"any form of cancer or tumours\",\n            \"any heart, liver, lung, or blood disorder\",\n            \"HIV\",\n            \"stroke or other brain disorder (such as epilepsy)\",\n            \"raised blood sugar or diabetes\",\n            \"high blood pressure or high cholesterol (where you are not following treatment advised by your doctor)\",\n            \"mental health conditions such as chronic depression, bipolar disorder, chronic anxiety, alcoholism and the use of recreational drugs on a regular basis (including having gone for rehabilitation due to drug or alcohol addiction)\"\n          ]\n        },\n        {\n          \"question_number\": \"3\",\n          \"question\": \"Have you ever been hospitalised for longer than 7 days in the last 3 years, excluding hospitalisation for childbirth?\",\n          \"answer\": \"No\",\n          \"question_details_array\": null\n        }\n      ],\n      \"benefit_sum_assured\": 300000,\n      \"benefit_discount_percent\": \"0\",\n      \"benefit_discount_array\": [\n        {\n          \"benefit_discount_type\": \"Staff\",\n          \"benefit_discount_percentage\": 10\n        }\n      ]\n    }\n  ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/sale.php/upload/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get Premium forcast",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\"apikey\": \"<<api_key>>\",\n\"policy_number\": \"TMA296EFA\",\n\"external_policy_number\": \"\",\n\"abi\": 0,\n\"forecast_years\": 10\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled//service.php/getPremiumForecast/"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Upload Sale Funeral",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer: 123123123123123123123123123"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\n    \"apikey\": \"<<api_key>>\",\n\n//    \"sale_reference_id\": \"FUN100099771\",\n\n    \"mandate_reference_number\": null,\n\n    \"status\": null,\n\n    \"product_id\": \"1\",\n\n    \"third_party_policy\": null,\n\n    \"owner_id_no\": null,\n\n    \"owner_passport_no\": null,\n\n    \"abi\": null,\n\n    \"sale_channel\": null,\n\n    \"consultant_code\": null,\n\n    \"bank_name\": \"Standard bank\",\n\n    \"bank_branch_code\": \"0510001\",\n\n    \"bank_account_no\": \"1203456789\",\n\n    \"bank_account_type\": \"Savings\",\n\n    \"debit_day\": 2,\n\n    \"last_skip_date\": null,\n\n    \"policy_nett_premium\": null,\n\n    \"policy_fee\": null,\n\n    \"policy_discount_rand\": null,\n\n    \"policy_discount_percent\": null,\n\n    \"one_time_pin\": null,\n\n    \"one_time_pin_number\": null,\n\n    \"one_time_pin_date_time\": null,\n\n    \"policy_note\": null,\n\n    \"policy_roleplayer_array\": [\n\n        {\n\n            \"policy_roleplayer_type\": \"Owner\",\n\n            \"policy_roleplayer_firstname\": \"Testing\",\n\n            \"policy_roleplayer_middlename\": null,\n\n            \"policy_roleplayer_initials\": null,\n\n            \"policy_roleplayer_lastname\": \"Limits\",\n\n            \"policy_roleplayer_cellphone\": \"0712345678\",\n\n            \"policy_roleplayer_email_address\": null,\n\n            \"policy_roleplayer_id_number\": \"9201061234084\",\n\n            \"policy_roleplayer_passport_number\": null,\n\n            \"policy_roleplayer_date_of_birth\": \"1992-01-06\",\n\n            \"policy_roleplayer_age\": null,\n\n            \"policy_roleplayer_external_customer_reference\": null,\n\n            \"policy_roleplayer_relationship_to_owner\": null,\n\n            \"policy_roleplayer_gender\": \"F\"\n\n        },\n\n        {\n\n            \"policy_roleplayer_type\": \"Account Payer\",\n\n            \"policy_roleplayer_firstname\": \"Testing\",\n\n            \"policy_roleplayer_middlename\": null,\n\n            \"policy_roleplayer_initials\": null,\n\n            \"policy_roleplayer_lastname\": \"Limits\",\n\n            \"policy_roleplayer_cellphone\": \"0712345678\",\n\n            \"policy_roleplayer_email_address\": null,\n\n            \"policy_roleplayer_id_number\": \"9201061234084\",\n\n            \"policy_roleplayer_passport_number\": null,\n\n            \"policy_roleplayer_date_of_birth\": \"1992-01-06\",\n\n            \"policy_roleplayer_age\": null,\n\n            \"policy_roleplayer_external_customer_reference\": null,\n\n            \"policy_roleplayer_relationship_to_owner\": null,\n\n            \"policy_roleplayer_gender\": \"F\"\n\n        },\n\n        {\n\n            \"policy_roleplayer_type\": \"Primary Life Assured\",\n\n            \"policy_roleplayer_firstname\": \"Testing\",\n\n            \"policy_roleplayer_middlename\": null,\n\n            \"policy_roleplayer_initials\": null,\n\n            \"policy_roleplayer_lastname\": \"Limits\",\n\n            \"policy_roleplayer_cellphone\": \"0712345678\",\n\n            \"policy_roleplayer_email_address\": null,\n\n            \"policy_roleplayer_id_number\": \"9201061234084\",\n\n            \"policy_roleplayer_passport_number\": null,\n\n            \"policy_roleplayer_date_of_birth\": \"1992-01-06\",\n\n            \"policy_roleplayer_age\": null,\n\n            \"policy_roleplayer_external_customer_reference\": null,\n\n            \"policy_roleplayer_relationship_to_owner\": null,\n\n            \"policy_roleplayer_gender\": \"F\"\n\n        }\n\n    ],\n\n    \"benefit_array\": [\n\n        {\n\n            \"benefit_roleplayer_array\": [\n\n                {\n\n                    \"benefit_roleplayer_type\": \"Life Assured\",\n\n                    \"benefit_roleplayer_firstname\": \"Testing\",\n\n                    \"benefit_roleplayer_middlename\": null,\n\n                    \"benefit_roleplayer_initials\": null,\n\n                    \"benefit_roleplayer_lastname\": \"Limits\",\n\n                    \"benefit_roleplayer_gender\": \"F\",\n\n                    \"benefit_roleplayer_cellphone\": null,\n\n                    \"benefit_roleplayer_email_address\": null,\n\n                    \"benefit_roleplayer_id_number\": \"9201061234084\",\n\n                    \"benefit_roleplayer_passport_number\": null,\n\n                    \"benefit_roleplayer_date_of_birth\": \"1992-01-06\",\n\n                    \"benefit_roleplayer_age\": null,\n\n                    \"benefit_roleplayer_external_customer_reference\": null,\n\n                    \"benefit_roleplayer_relationship_to_owner\": \"Owner\",\n\n                    \"benefit_roleplayer_percentage\": 95\n\n                },\n\n                {\n\n                    \"benefit_roleplayer_type\": \"Beneficiary\",\n\n                    \"benefit_roleplayer_firstname\": \"Ben\",\n\n                    \"benefit_roleplayer_middlename\": null,\n\n                    \"benefit_roleplayer_initials\": null,\n\n                    \"benefit_roleplayer_lastname\": \"Limits\",\n\n                    \"benefit_roleplayer_gender\": \"F\",\n\n                    \"benefit_roleplayer_cellphone\": null,\n\n                    \"benefit_roleplayer_email_address\": null,\n\n                    \"benefit_roleplayer_id_number\": \"\",\n\n                    \"benefit_roleplayer_passport_number\": null,\n\n                    \"benefit_roleplayer_date_of_birth\": \"1999-03-03\",\n\n                    \"benefit_roleplayer_age\": null,\n\n                    \"benefit_roleplayer_external_customer_reference\": null,\n\n                    \"benefit_roleplayer_relationship_to_owner\": \"Child\",\n\n                    \"benefit_roleplayer_percentage\": 5\n\n                }\n\n            ],\n\n            \"benefit_id\": \"1\",\n\n            \"benefit_premium\": 66,\n\n            \"benefit_amount\": 100000,\n\n            \"benefit_term\": 1,\n\n            \"benefit_frequency\": null,\n\n            \"benefit_fee\": null,\n\n            \"benefit_underwriting_array\": null,\n\n            \"benefit_sum_assured\": 100000,\n\n            \"benefit_discount_percent\": null\n\n        },\n\n        {\n\n            \"benefit_roleplayer_array\": [\n\n                {\n\n                    \"benefit_roleplayer_type\": \"Life Assured\",\n\n                    \"benefit_roleplayer_firstname\": \"Testing\",\n\n                    \"benefit_roleplayer_middlename\": null,\n\n                    \"benefit_roleplayer_initials\": null,\n\n                    \"benefit_roleplayer_lastname\": \"Limits\",\n\n                    \"benefit_roleplayer_gender\": \"F\",\n\n                    \"benefit_roleplayer_cellphone\": null,\n\n                    \"benefit_roleplayer_email_address\": null,\n\n                    \"benefit_roleplayer_id_number\": \"9201061234084\",\n\n                    \"benefit_roleplayer_passport_number\": null,\n\n                    \"benefit_roleplayer_date_of_birth\": \"1992-01-06\",\n\n                    \"benefit_roleplayer_age\": null,\n\n                    \"benefit_roleplayer_external_customer_reference\": null,\n\n                    \"benefit_roleplayer_relationship_to_owner\": \"Owner\",\n\n                    \"benefit_roleplayer_percentage\": null\n\n                }\n\n            ],\n\n            \"benefit_id\": \"2\",\n\n            \"benefit_premium\": 127,\n\n            \"benefit_amount\": 5000,\n\n            \"benefit_term\": 1,\n\n            \"benefit_frequency\": null,\n\n            \"benefit_fee\": null,\n\n            \"benefit_underwriting_array\": null,\n\n            \"benefit_sum_assured\": 5000,\n\n            \"benefit_discount_percent\": null\n\n        }\n\n    ]\n\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "<<url>>/public/api/ruled/sale.php/upload/"
+        }
+      },
+      "response": []
+    }
+  ]
+}
