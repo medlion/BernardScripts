@@ -17,7 +17,7 @@ if [[ $(git commit -v --dry-run) == *"dd ("* ]]; then
   exit 1
 fi
 
-if [[ $(git commit -v --dry-run) == *"dd("* ]]; then
+if git commit -v --dry-run | grep -E '(^\+?|[[:space:]])dd\(' >/dev/null 2>&1; then
   echo 'Do not commit dump and dies'
   exit 1
 fi
