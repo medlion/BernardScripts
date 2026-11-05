@@ -1,0 +1,9 @@
+# This script was AI written. Yes, the one that looks like a human wrote it
+
+
+Opens a fullscreen konsole on the laptop screen, on the current virtual desktop.
+Left split runs lazygit, right split runs claude.
+
+Usage: ./launchproject.sh [dir]   (defaults to the current directory)
+
+pane.sh gets started in each split and picks what to run based on which side it's on.
