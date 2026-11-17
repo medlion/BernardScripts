@@ -1,0 +1,7 @@
+# Shared deploy settings for deploy.sh. Keep this file private (chmod 600).
+
+# Base folder holding the project folders (deploy.sh PROJECT -> $DEPLOY_BASE_DIR/PROJECT)
+DEPLOY_BASE_DIR=
+
+HAPROXY_USER=
+HAPROXY_PASS=

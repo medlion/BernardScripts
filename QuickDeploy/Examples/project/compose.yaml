@@ -1,0 +1,13 @@
+services:
+  <PROJECT>_frontend:
+    image: <PROJECT>:frontend
+    networks:
+      - default
+      - proxy
+  <PROJECT>_backend:
+    image: <PROJECT>:backend
+    network_mode: service:<PROJECT>_frontend
+
+networks:
+  proxy:
+    external: true

@@ -1,0 +1,24 @@
+services:
+  haproxy:
+    container_name: haproxy
+    image: haproxy-dataplane:latest
+    restart: unless-stopped
+    ports:
+      - 80:80
+      - 443:443
+      - 5173:5173
+      - 5555:5555
+      # HAProxy stats page, published on the host loopback only (no auth configured)
+      - 127.0.0.1:8404:8404
+    networks:
+      - default
+      - proxy
+#    volumes:
+#      - ./haproxy.cfg:/etc/haproxy/haproxy.cfg:Z
+#      - ./config/dataplaneapi.yml:/etc/haproxy/dataplaneapi.yml:Z
+
+# Shared network that HAProxy uses to reach the apps it fronts.
+# Create once with: docker network create proxy
+networks:
+  proxy:
+    external: true

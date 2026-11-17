@@ -1,0 +1,26 @@
+services:
+  <PROJECT>_frontend:
+    volumes:
+      - <PATH/TO/PROJECT/FILES>/public:/var/www/public:z
+      - <PATH/TO/BUILD/FOLDER>/<PROJECT>/live/nginx.conf:/etc/nginx/nginx.conf:ro,z
+
+  <PROJECT>_backend:
+    user: "1000:1000"
+    volumes:
+      - <PATH/TO/PROJECT/FILES>:/var/www:z
+
+  node:
+    image: node:24-alpine
+    network_mode: service:<PROJECT>_frontend
+    working_dir: /var/www
+    # Vite listens on loopback only; nginx in the frontend proxies Vite's paths to it, so the page and the
+    # assets share one origin. Once the Laravel plugin has written public/hot, it is rewritten to that origin.
+    # Optional: if the project has a public/fonts-manifest.dev.json, also wait for it and rewrite it, e.g.
+    #   until [ -s public/hot ] && [ -s public/fonts-manifest.dev.json ]; do sleep 0.5; done;
+    #   sed -i 's|http://127.0.0.1:5173|https://<APP_HOST>|g' public/fonts-manifest.dev.json;
+    command: >-
+      sh -c "npx vite --cors --host 127.0.0.1 --port 5173 &
+      until [ -s public/hot ]; do sleep 0.5; done;
+      echo https://<APP_HOST> > public/hot; wait"
+    volumes:
+      - <PATH/TO/PROJECT/FILES>:/var/www:z
