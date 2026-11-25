@@ -1,0 +1,32 @@
+#!/bin/bash
+
+#
+# To prevent protected branches from being deleted on origin, this script aborts any push
+# that deletes one of the branches listed below (e.g. "git push origin --delete qa").
+#
+PROTECTED_BRANCHES=(main master develop staging production prod qa)
+
+if [[ "$1" != "origin" ]]; then
+  exit 0
+fi
+
+zero_sha="0000000000000000000000000000000000000000"
+
+while read -r local_ref local_sha remote_ref remote_sha
+do
+  if [[ "$local_sha" != "$zero_sha" ]]; then
+    continue
+  fi
+
+  branch="${remote_ref#refs/heads/}"
+
+  for protected in "${PROTECTED_BRANCHES[@]}"; do
+    if [[ "$branch" == "$protected" ]]; then
+      echo "You are trying to delete the protected branch '$branch' on origin."
+      echo "Remove it from the push and try again."
+      exit 1
+    fi
+  done
+done
+
+exit 0
